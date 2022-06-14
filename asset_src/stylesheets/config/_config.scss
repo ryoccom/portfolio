@@ -1,0 +1,23 @@
+//colorset
+$black: #000000;
+$normal_glay: #f7f5f2;
+$dark_glay: #2d2d2d;
+$white: #ffffff;
+
+//wrappersize
+$sizel:1280px;
+
+//breakpoint
+$breakpoints: (
+  'sm': 'screen and (max-width: 768px)',
+  'md': 'screen and (max-width: 1366px)'
+);
+
+
+//mediaquery
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+};
+

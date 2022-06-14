@@ -1,0 +1,48 @@
+@use "../config/config" as config;
+
+//font size
+@function get_vw($size, $viewport:1366) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@function spget_vw($size, $spviewport:768) {
+  $rate: 100 / $spviewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin font_vw($font_size:10) {
+  font-size: $font_size * 1px;
+  
+  @include mq(md) {
+    font-size: get_vw($font_size);
+  }
+
+  @include mq() {
+      font-size: spget_vw($font_size);
+  }
+}
+
+@mixin width_vw($box_size:10) {
+  width: $box_size * 1px;
+  @include mq(md) {
+    width: get_vw($box_size);
+  }
+
+  @include mq() {
+      width: spget_vw($box_size);
+  }
+}
+
+@mixin height_vw($height_size:10) {
+  height: $height_size * 1px;
+  @include mq(md) {
+    height: get_vw($height_size);
+  }
+
+  @include mq() {
+      height: spget_vw($height_size);
+  }
+}
+
+
