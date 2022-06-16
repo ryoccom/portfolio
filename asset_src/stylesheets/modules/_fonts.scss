@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Notosans';
+    font-style: normal;
+    font-weight: 400;
+    src:
+    local('Noto Sans CJK JP Regular'),
+    local('NotoSansCJKjp-Regular'),
+    local('NotoSansJP-Regular'),
+    url('fonts/NotoSansJP-Regular.woff') format('woff'),
+    url('fonts/NotoSansJP-Regular.woff2') format('woff2'),
+    url('fonts/NotoSansJP-Regular.otf') format('otf'),;
+}
+
+@font-face {
+    font-family: 'Gothampro';
+    font-style: normal;
+    font-weight: 400;
+    src:
+    url('fonts/GothamProMedium.woff') format('woff'),
+    url('fonts/GothamProMedium.ttf') format('ttf'),;
+}
+
+@font-face {
+    font-family: 'Gothampro';
+    font-style: normal;
+    font-weight: 700;
+    src:
+    url('fonts/GothamBold.woff') format('woff'),
+    url('fonts/GothamBold.ttf') format('ttf'),;
+}
+
+
+@font-face {
+    font-family: 'Gothampro';
+    font-style: normal;
+    font-weight: 800;
+    src:
+    url('fonts/Gotham-Pro-Black.woff') format('woff'),
+    url('fonts/Gotham Pro Black.ttf') format('ttf'),;
+}
+
+
+

@@ -8,13 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 body {
-    color: config.$textcolor; 
+    color: config.$black; 
     font-size: 1.6em;
-    line-height: 1.9;
-    font-family: 'Notosans', sans-serif;
-    letter-spacing: 0;
+    line-height: 1.5;
+    font-family: 'Gothampro', sans-serif;
+    letter-spacing: 0.05em;
     position: relative;
-    cursor: none;
 }
 
 
@@ -22,12 +21,15 @@ a {
     outline: none; 
     text-decoration: none;
     transition: .2s;
+    color: config.$black;
     &:hover {
         text-decoration: none;
+        color: config.$black;
     }
 
     &:focus {
         outline: none;
+        color: config.$black;
     }
 }
 

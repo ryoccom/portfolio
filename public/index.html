@@ -21,26 +21,36 @@
         <!--header-->
         <header>
             <div class="header">
-                <h1>
-                    <a href="index.html">RYOCCO WADA</a>
-                </h1>
+                <div class="header__logo">
+                    <h1>
+                        <a href="index.html"><span data-hover="RYOCCO WADA">RYOCCO WADA</span></a>
+                    </h1>
+                    <div class="switch">
+                        <input type="checkbox" id="switch__trigger">
+                        <label class="switch__mode js-mode" for="switch__trigger">NIGHT</label>
+                    </div>
+                </div>
+                
                 <nav>
                     <div class="header__menu">
                         <ul>
-                            <li><a href="#about">ABOUT</a></li>
-                            <li><a href="#works">WORKS</a></li>
-                            <li><a href="#contact">CONTACT</a></li>
+                            <li><a href="#about"><span data-hover="ABOUT">ABOUT</span></a></li>
+                            <li><a href="#works"><span data-hover="WORKS"></span>WORKS</a></li>
+                            <li><a href="#contact"><span data-hover="CONTACT">CONTACT</span></a></li>
                         </ul>
                     </div>
                 </nav>
-                <div class="switch">
-                    <div class="mode__change js-mode">NIGHT</div>
-                    <input type="checkbox" class="mode__switch">
-                </div>
                 <button class="header__button" aria-controls="global-nav" aria-expanded="false">
                     <span class="button__line"></span>
                     <span class="button__hidden">MENUBUTTON</span>
                 </button>
+                <div class="header__cv">
+                    <div class="btn">
+                        <span class="btn__wrap">
+                            <a href="#contact">HIRE ME</a>
+                        </span>
+                    </div>
+                </div>
             </div>
         </header>
         <!--/header-->
@@ -50,13 +60,13 @@
                 <div class="mainvisual">
                     <div class="mainvisual__wrap">
                         <picture>
-                            <img src="" alt="I'M RYOCCO">
+                            <img src="img/kurumi.png" alt="I'M RYOCCO" class="js-paralax">
                         </picture>
                     </div>
                     <div class="mainvisual__title">
                         <h2>I'M RYOCCO.</h2>
-                        <p>WEB DESIGNER<br>
-                            + CODER</p>
+                        <p>WEB DESIGNER</p>
+                        <p>+ CODER</p>
                     </div>
                 </div>
             </section>

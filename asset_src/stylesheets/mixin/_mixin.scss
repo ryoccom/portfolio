@@ -1,4 +1,4 @@
-@use "../config/config" as config;
+@use "../config/config"as config;
 
 //font size
 @function get_vw($size, $viewport:1366) {
@@ -12,37 +12,228 @@
 }
 
 @mixin font_vw($font_size:10) {
-  font-size: $font_size * 1px;
-  
-  @include mq(md) {
-    font-size: get_vw($font_size);
-  }
+  font-size: get_vw($font_size);
 
-  @include mq() {
-      font-size: spget_vw($font_size);
+  @include config.mq() {
+    font-size: spget_vw($font_size);
   }
 }
 
 @mixin width_vw($box_size:10) {
-  width: $box_size * 1px;
-  @include mq(md) {
-    width: get_vw($box_size);
-  }
+  width: get_vw($box_size);
 
-  @include mq() {
-      width: spget_vw($box_size);
+  @include config.mq() {
+    width: spget_vw($box_size);
   }
 }
 
 @mixin height_vw($height_size:10) {
   height: $height_size * 1px;
-  @include mq(md) {
+
+  @include config.mq(md) {
     height: get_vw($height_size);
   }
 
-  @include mq() {
-      height: spget_vw($height_size);
+  @include config.mq() {
+    height: spget_vw($height_size);
   }
 }
 
+//menuhover
+@mixin menuhover() {
+  overflow: hidden;
 
+  span {
+    position: relative;
+    transition: all .3s;
+    display: inline-block;
+    top: 8px;
+
+    &:before {
+      content: attr(data-hover);
+      position: absolute;
+      top: 100%;
+      color: config.$black;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &:hover {
+    span {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+//menu line
+@mixin menuline() {
+  display: block;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 0;
+    background: config.$black;
+    left: 0;
+    top: 50%;
+    position: absolute;
+    transition: .4s;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    &::before {
+      @include width_vw(55);
+      left: 0;
+    }
+  }
+}
+
+//btn
+@mixin btn() {
+  @include font_vw(18);
+  position: relative;
+  z-index: 1;
+  @include width_vw(190);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    transition: .3s all;
+  }
+
+  &::before {
+    width: calc(100% - 1px);
+    height: 100%;
+    background: config.$black;
+    top: 0;
+    right: 0;
+  }
+
+  &::after {
+    width: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 85%;
+    height: 1px;
+    background: config.$black;
+  }
+
+  span {
+    position: relative;
+    width: 100%;
+    display: block;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: config.$black;
+      top: 0;
+      transition: .3s all;
+      width: 0;
+      height: 0;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    color: #FFF;
+    width: 100%;
+    padding: 5% 0;
+    text-align: center;
+    transition: .5s all;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: config.$black;
+      bottom: -1px;
+      transition: .3s all;
+      width: 0;
+      height: 0;
+    }
+
+    &::before {
+      right: 0;
+    }
+
+    &::after {
+      left: -1px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      width: 0;
+    }
+
+    &::after {
+      width: 30%;
+      transition-delay: 1s;
+    }
+
+    span {
+      &::before {
+        width: 100%;
+        height: 1px;
+      }
+
+      &:after {
+        height: calc(100% + 1px);
+        width: 1px;
+        transition-delay: .3s;
+      }
+    }
+
+    a {
+      background: config.$white;
+      color: config.$black;
+
+      &::before {
+        width: 100%;
+        height: 1px;
+        transition-delay: .45s;
+      }
+
+      &:after {
+        height: calc(100% + 1px);
+        width: 1px;
+        transition-delay: .7s;
+      }
+    }
+  }
+}
+
+//texthide
+@mixin texthide {
+  color: transparent;
+  overflow: hidden;
+  display: table;
+  position: relative;
+  animation: mvcopy linear .4s forwards;
+  animation-delay: 1.2s;
+
+  &:before {
+    content: "";
+    background: config.$normal_glay;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: mvhide linear .4s forwards;
+    animation-delay: 1s;
+  }
+}

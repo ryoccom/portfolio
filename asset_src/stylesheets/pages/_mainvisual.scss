@@ -1,0 +1,93 @@
+@use "../config/config" as config;
+@use "../mixin/mixin"as mixin;
+@use "../modules/animations"as anime;
+
+.mainvisual{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 13.91%;
+        max-width: 190px;
+        height: 100vh;
+        background: config.$normal_glay;
+        left: 0;
+        top: 0;
+      }
+    
+    &__wrap{
+        width: 50%;
+        background: config.$normal_glay;
+        padding-top: 60vh;
+        overflow: hidden;
+        position: relative;
+        margin: 0 0 0 auto;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: config.$white;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            animation: imghide cubic-bezier(.17,.67,.88,.45) .2s forwards;
+        }
+        
+        img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 150%;
+            right: 4%;
+            margin-top: 8%;
+        }
+    }
+    &__title{
+       border-left: solid 15px config.$black;
+       position: absolute;
+       left: 30%;
+       bottom: 13%;
+       padding-left: 3%;
+       z-index: 1;
+       &::before{
+           content: "";
+           position: absolute;
+           left: 0;
+           top: 5%;
+           width: 12px;
+           height: 100%;
+           background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(0, 0, 0, 1) 9px, rgba(0, 0, 0, 1) 11px );
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 105%;
+            top: 0;
+            right: 95%;
+            background:config.$white;
+            z-index: 1;
+            animation: mvtitle cubic-bezier(.17,.67,.88,.45) 2s forwards;
+            animation-delay: .7s;
+        }
+
+       h2{
+        @include mixin.font_vw(71);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0.08em;
+        margin-bottom: 1%;
+        @include mixin.texthide();
+        
+       }
+       p{
+        @include mixin.font_vw(35);
+        @include mixin.texthide();
+       }
+    } 
+}

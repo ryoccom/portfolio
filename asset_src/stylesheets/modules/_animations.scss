@@ -1,0 +1,52 @@
+@use "../config/config" as config;
+
+@keyframes imghide{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes logo{
+    0%{
+       transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes mvtitle{
+    0%{
+        width: 30px;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes mvcopy{
+    0%{
+       color: transparent;
+    }
+    50%{
+        color: config.$black;
+    }
+    100%{
+        color: config.$black;
+    }
+}
+
+@keyframes mvhide{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
