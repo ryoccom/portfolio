@@ -1,0 +1,160 @@
+@use "../config/config" as config;
+@use "../mixin/mixin"as mixin;
+@use "../modules/animations"as anime;
+
+.works{
+    height: 100vh;
+    background: config.$normal_glay;
+    display: flex;
+    align-items: center;
+    .wrap{
+        @include mixin.width_vw(1000);
+        margin:0 auto;
+        position: relative;
+    }
+    
+    &__img{
+        position: relative;
+        width: 62%;
+        height: 55vh;
+        overflow: hidden;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;        
+        }
+    }
+    &__detail{
+        position: absolute;
+        bottom: -10%;
+        right: 0;
+        @include mixin.width_vw(560);
+        background: config.$white;
+        padding:7vh 5% 0;
+        height: 45vh;
+        border-left: solid 1px config.$black;
+        
+        &::before{
+           content: "";
+           position: absolute;
+           left: 0;
+           top: 0;
+           width: 12px;
+           height: 100%;
+           background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(0, 0, 0, 1) 9px, rgba(0, 0, 0, 1) 11px );
+        }
+        ul{
+            position: relative;
+            height: 100%;
+           
+            li{
+                position: absolute;
+                top: 10%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+        
+            }
+        }
+        .js-show{
+            opacity: 1;
+            top:0;
+            transition: all .5s;
+            transition-delay: .3s;
+            z-index: 1;
+        }
+        
+        &__title{
+            h4{
+                @include mixin.font_vw(26);
+                line-height: .8;
+            }
+            p{
+                @include mixin.font_vw(14);
+                font-family: 'Notosans';
+            }
+            margin-bottom: 2vh;
+        }
+        &__text{
+            p{
+                font-weight: bold;
+                @include mixin.font_vw(16);
+                line-height: 2;
+            }
+            margin-bottom: 4%;
+        }
+        &__tags{
+            p{
+                display: inline-block;
+
+                @include mixin.font_vw(14);
+                &:before{
+                    content: "-";
+                    margin-right: 5px;
+                    line-height: 1.8;
+                }
+            }
+            margin-bottom: 4%;
+        }
+        &__link{
+
+            a{
+                display: inline-block;
+                padding:3% 10%;
+                border: config.$black solid 1px;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    transition: .3s all;
+                    width: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 85%;
+                    height: 1px;
+                    background: config.$black;
+
+                }
+                &:hover {
+                    &::after {
+                      width: 30%;
+                    }
+                }
+            }
+        }
+    }
+    h3{
+        position: absolute;
+        color: config.$white;
+        @include mixin.font_vw(100);
+        bottom: calc(100% - 5%);
+        right: 0;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 5px;
+    }
+}
+
+.splide{
+    width: 80%;
+    &__track{
+        overflow: visible;
+    }
+    &__arrows{
+        position: absolute;
+        bottom: -16%;
+        right: -25%;
+        z-index: 2;
+        button{
+            width: 65px;
+            height: 65px;
+            background:config.$black;
+            color: config.$white;
+            outline: none;
+            letter-spacing: 0;
+        }
+    }
+}

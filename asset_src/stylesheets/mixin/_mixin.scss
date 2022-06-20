@@ -105,7 +105,7 @@
 
   &::before {
     width: calc(100% - 1px);
-    height: 100%;
+    height: calc(100% + 1px);
     background: config.$black;
     top: 0;
     right: 0;
@@ -227,7 +227,7 @@
 
   &:before {
     content: "";
-    background: config.$normal_glay;
+    background: config.$black;
     width: 0;
     height: 100%;
     position: absolute;
@@ -235,5 +235,28 @@
     top: 0;
     animation: mvhide linear .4s forwards;
     animation-delay: 1s;
+  }
+}
+
+//about line
+@mixin aboutline() {
+  transition: .4s;
+  &::before {
+    content: "";
+    height: 1px;
+    width: 0;
+    background: config.$black;
+    left: -100%;
+    top: 50%;
+    position: absolute;
+    transition: .4s;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    letter-spacing: 3px;
+    &:before{
+      width: 99.5%;
+    }
   }
 }

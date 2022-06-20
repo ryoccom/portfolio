@@ -1,0 +1,138 @@
+@use "../config/config" as config;
+@use "../mixin/mixin"as mixin;
+@use "../modules/animations"as anime;
+
+.about{
+    height: 100vh;
+    position: relative;
+    &:before{
+        content: "";
+        width: 50%;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        background: url(../img/about_bg01.png) no-repeat;
+        background-size: cover;
+        opacity: 0;
+        transition: all .5s;
+        z-index: -1;
+    }
+    &:after{
+        content: "";
+        width: 50%;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        background: config.$white;
+        z-index: 0;
+        transition: .5s all;
+    }
+    
+    &.js-bg01{
+        &:before{
+            background: url(../img/about_bg01.png) no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+    }
+    &.js-bg02{
+        &:before{
+            background: url(../img/about_bg02.png) no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+
+    }
+
+    &.js-bg03{
+        &:before{
+            background: url(../img/about_bg03.png) no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+
+    }
+
+    &.js-bg04{
+        &:before{
+            background: url(../img/about_bg04.png) no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+
+    }
+
+    &.js-bg05{
+        &:before{
+            background: url(../img/about_bg05.png) no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+    }
+
+ 
+    h3{
+        position: absolute;
+        top: 20%;
+        left: 13.5%;
+        @include mixin.font_vw(242);
+        color: config.$normal_glay;
+        font-weight: 800;
+        line-height: 0;
+        letter-spacing: 20px;
+        z-index: 1;
+    }
+    .wrap{
+        @include mixin.width_vw(1000);
+        margin:0 auto;
+    }
+    dl{
+        padding-top:23vh;
+        position: relative;
+        z-index: 2;
+        dt{
+            @include mixin.font_vw(36);
+            display: inline-block;
+            margin-bottom: 2.5%;
+            line-height: 1;
+            @include mixin.aboutline();
+            position: relative;
+            cursor: pointer;
+
+            span{
+                @include mixin.font_vw(18);
+                margin: 0 0 0 5px; 
+            }
+            &.js-open{
+                &:before{
+                    width: 99.5%;
+                }
+                & + dd{
+                    height: auto;
+                }
+            }
+        }
+        dd{
+            height: 0;
+            @include mixin.font_vw(16);
+            transition: all .3s;
+            overflow: hidden;
+            line-height: 2.2;
+            font-weight: bold;
+            span{
+                padding:2% 0 4%;
+                display: block;
+            }
+        }
+    }
+}
+
+.js-active{
+    .about{
+        &:after{
+            transform: translateX(100%);
+        }
+    }
+}

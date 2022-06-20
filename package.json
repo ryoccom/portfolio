@@ -28,7 +28,8 @@
     "webpack-fix-style-only-entries": "^0.6.1"
   },
   "dependencies": {
-    "gsap": "^3.9.1",
+    "@splidejs/splide": "^4.0.7",
+    "gsap": "^3.10.4",
     "smoothscroll-polyfill": "^0.4.4",
     "vivus": "^0.4.6"
   },

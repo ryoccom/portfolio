@@ -1,4 +1,4 @@
 import './modules/mainvisual';
-// import './modules/scrolltrigger';
-// import './modules/smoothscroll';
-// import './modules/console';
+import './modules/about';
+import './modules/scrolltrigger';
+import './modules/slider';
