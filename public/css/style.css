@@ -828,12 +828,12 @@ a:focus {
   height: 1px;
   background: #000000;
 }
-.header__cv .btn span {
+.header__cv .btn__wrap {
   position: relative;
   width: 100%;
   display: block;
 }
-.header__cv .btn span::before, .header__cv .btn span::after {
+.header__cv .btn__wrap::before, .header__cv .btn__wrap::after {
   content: "";
   position: absolute;
   background: #000000;
@@ -843,13 +843,13 @@ a:focus {
   width: 0;
   height: 0;
 }
-.header__cv .btn span::before {
+.header__cv .btn__wrap::before {
   left: 0;
 }
-.header__cv .btn span::after {
+.header__cv .btn__wrap::after {
   right: 0;
 }
-.header__cv .btn a {
+.header__cv .btn__wrap__line, .header__cv .btn a {
   display: block;
   color: #FFF;
   width: 100%;
@@ -859,7 +859,7 @@ a:focus {
   transition: 0.5s all;
   z-index: 1;
 }
-.header__cv .btn a::before, .header__cv .btn a::after {
+.header__cv .btn__wrap__line::before, .header__cv .btn__wrap__line::after, .header__cv .btn a::before, .header__cv .btn a::after {
   content: "";
   position: absolute;
   background: #000000;
@@ -869,10 +869,10 @@ a:focus {
   width: 0;
   height: 0;
 }
-.header__cv .btn a::before {
+.header__cv .btn__wrap__line::before, .header__cv .btn a::before {
   right: 0;
 }
-.header__cv .btn a::after {
+.header__cv .btn__wrap__line::after, .header__cv .btn a::after {
   left: -1px;
 }
 .header__cv .btn:hover::before {
@@ -883,27 +883,27 @@ a:focus {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
 }
-.header__cv .btn:hover span::before {
+.header__cv .btn:hover .btn__wrap::before {
   width: 100%;
   height: 1px;
 }
-.header__cv .btn:hover span:after {
+.header__cv .btn:hover .btn__wrap:after {
   height: calc(100% + 1px);
   width: 1px;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
-.header__cv .btn:hover a {
+.header__cv .btn:hover .btn__wrap__line, .header__cv .btn:hover a {
   background: #ffffff;
   color: #000000;
 }
-.header__cv .btn:hover a::before {
+.header__cv .btn:hover .btn__wrap__line::before, .header__cv .btn:hover a::before {
   width: 100%;
   height: 1px;
   -webkit-transition-delay: 0.45s;
           transition-delay: 0.45s;
 }
-.header__cv .btn:hover a:after {
+.header__cv .btn:hover .btn__wrap__line:after, .header__cv .btn:hover a:after {
   height: calc(100% + 1px);
   width: 1px;
   -webkit-transition-delay: 0.7s;
@@ -1016,10 +1016,6 @@ a:focus {
 }
 .header__button {
   display: none;
-}
-
-.wrapper {
-  overflow: hidden;
 }
 
 .wrapper {
@@ -1631,4 +1627,277 @@ a:focus {
   color: #ffffff;
   outline: none;
   letter-spacing: 0;
+}
+
+.contact {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact .wrap {
+  width: 73.2064421669vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .contact .wrap {
+    width: 130.2083333333vw;
+  }
+}
+.contact__detail {
+  width: 50%;
+}
+.contact__detail h3 {
+  font-size: 7.3206442167vw;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+@media screen and (max-width: 768px) {
+  .contact__detail h3 {
+    font-size: 13.0208333333vw;
+  }
+}
+.contact__detail__title {
+  margin-bottom: 5%;
+}
+.contact__detail__title p {
+  line-height: 1.2;
+  font-size: 5.3440702782vw;
+}
+.contact__detail__title p span {
+  font-size: 2.196193265vw;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .contact__detail__title p span {
+    font-size: 3.90625vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__detail__title p {
+    font-size: 9.5052083333vw;
+  }
+}
+.contact__detail__comment {
+  padding: 5vh 8%;
+  background: #f7f5f2;
+  position: relative;
+  overflow: hidden;
+}
+.contact__detail__comment p {
+  font-size: 1.1713030747vw;
+  line-height: 2;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .contact__detail__comment p {
+    font-size: 2.0833333333vw;
+  }
+}
+.contact__detail__comment:before {
+  position: absolute;
+  content: "YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE";
+  color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  font-size: 1.1713030747vw;
+}
+@media screen and (max-width: 768px) {
+  .contact__detail__comment:before {
+    font-size: 2.0833333333vw;
+  }
+}
+.contact__way {
+  width: 40%;
+  position: relative;
+}
+.contact__way__sns {
+  margin-top: 5vh;
+}
+.contact__way__sns ul li {
+  margin-bottom: 1%;
+}
+.contact__way__sns ul li::before {
+  content: "-";
+  margin-right: 5px;
+}
+.contact__way__sns ul li a {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.contact__way__sns ul li a:hover {
+  letter-spacing: 3px;
+}
+.contact__way__form {
+  padding-top: 6vh;
+}
+.contact__way__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+.contact__way__form p {
+  width: 100%;
+}
+.contact__way__form .formwrap {
+  width: 100%;
+  border-bottom: solid 2px #000000;
+  margin-bottom: 3vh;
+}
+.contact__way__form .formwrap input,
+.contact__way__form .formwrap textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 2%;
+}
+.contact__way__form .btn {
+  font-size: 1.317715959vw;
+  position: relative;
+  z-index: 1;
+  width: 13.9092240117vw;
+  margin-top: 5%;
+}
+@media screen and (max-width: 768px) {
+  .contact__way__form .btn {
+    font-size: 2.34375vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__way__form .btn {
+    width: 24.7395833333vw;
+  }
+}
+.contact__way__form .btn::before, .contact__way__form .btn::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.contact__way__form .btn::before {
+  width: calc(100% - 1px);
+  height: calc(100% + 1px);
+  background: #000000;
+  top: 0;
+  right: 0;
+}
+.contact__way__form .btn::after {
+  width: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 85%;
+  height: 1px;
+  background: #000000;
+}
+.contact__way__form .btn__wrap {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.contact__way__form .btn__wrap::before, .contact__way__form .btn__wrap::after {
+  content: "";
+  position: absolute;
+  background: #000000;
+  top: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  width: 0;
+  height: 0;
+}
+.contact__way__form .btn__wrap::before {
+  left: 0;
+}
+.contact__way__form .btn__wrap::after {
+  right: 0;
+}
+.contact__way__form .btn__wrap__line, .contact__way__form .btn a {
+  display: block;
+  color: #FFF;
+  width: 100%;
+  padding: 5% 0;
+  text-align: center;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 1;
+}
+.contact__way__form .btn__wrap__line::before, .contact__way__form .btn__wrap__line::after, .contact__way__form .btn a::before, .contact__way__form .btn a::after {
+  content: "";
+  position: absolute;
+  background: #000000;
+  bottom: -1px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  width: 0;
+  height: 0;
+}
+.contact__way__form .btn__wrap__line::before, .contact__way__form .btn a::before {
+  right: 0;
+}
+.contact__way__form .btn__wrap__line::after, .contact__way__form .btn a::after {
+  left: -1px;
+}
+.contact__way__form .btn:hover::before {
+  width: 0;
+}
+.contact__way__form .btn:hover::after {
+  width: 30%;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.contact__way__form .btn:hover .btn__wrap::before {
+  width: 100%;
+  height: 1px;
+}
+.contact__way__form .btn:hover .btn__wrap:after {
+  height: calc(100% + 1px);
+  width: 1px;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.contact__way__form .btn:hover .btn__wrap__line, .contact__way__form .btn:hover a {
+  background: #ffffff;
+  color: #000000;
+}
+.contact__way__form .btn:hover .btn__wrap__line::before, .contact__way__form .btn:hover a::before {
+  width: 100%;
+  height: 1px;
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+.contact__way__form .btn:hover .btn__wrap__line:after, .contact__way__form .btn:hover a:after {
+  height: calc(100% + 1px);
+  width: 1px;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+.contact__way__form .btn input {
+  border: none;
+  outline: none;
+}
+.contact__way__form .btn:hover input {
+  color: #000000;
+}
+.contact__way__thanks {
+  text-align: right;
+  margin-top: 5vh;
 }

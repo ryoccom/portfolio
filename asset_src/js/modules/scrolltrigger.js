@@ -9,7 +9,7 @@ gsap.to('#about', {
   scrollTrigger: {
     trigger: '#about',
     toggleClass: 'js-active',
-    start: 'top 0',
+    start: 'top 20%',
     once:true
   }
 });

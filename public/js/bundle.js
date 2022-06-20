@@ -27,7 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_mainvisual__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mainvisual */ \"./asset_src/js/modules/mainvisual.js\");\n/* harmony import */ var _modules_mainvisual__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_mainvisual__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/about */ \"./asset_src/js/modules/about.js\");\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_about__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_scrolltrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrolltrigger */ \"./asset_src/js/modules/scrolltrigger.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./asset_src/js/modules/slider.js\");\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_mainvisual__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mainvisual */ \"./asset_src/js/modules/mainvisual.js\");\n/* harmony import */ var _modules_mainvisual__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_mainvisual__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/about */ \"./asset_src/js/modules/about.js\");\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_about__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_scrolltrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrolltrigger */ \"./asset_src/js/modules/scrolltrigger.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./asset_src/js/modules/slider.js\");\n/* harmony import */ var _modules_darkmode__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/darkmode */ \"./asset_src/js/modules/darkmode.js\");\n/* harmony import */ var _modules_darkmode__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_darkmode__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/index.js?");
 
 /***/ }),
 
@@ -38,6 +38,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function() {
 
 eval("//about toggle\nvar toggles = document.querySelectorAll(\".about dt\");\nvar togglecontents = document.querySelectorAll(\".about dd\");\nvar togglebg = document.querySelector(\".about\");\ntoggles.forEach(function (toggle) {\n  var target = toggle.nextElementSibling;\n  var toggleNum = [].slice.call(toggles).indexOf(toggle);\n  toggleNum = toggleNum + 1;\n  toggle.addEventListener(\"click\", function () {\n    toggles.forEach(function (toggle) {\n      toggle.classList.remove(\"js-open\");\n    });\n    togglecontents.forEach(function (togglecontent) {\n      togglecontent.style.height = \"0\";\n    });\n    toggle.classList.add(\"js-open\");\n    target.style.height = target.scrollHeight + \"px\";\n    togglebg.className = \"about js-bg0\" + toggleNum;\n  });\n  toggle.addEventListener(\"mouseover\", function () {\n    togglebg.className = \"about js-bg0\" + toggleNum;\n  });\n});\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/about.js?");
+
+/***/ }),
+
+/***/ "./asset_src/js/modules/darkmode.js":
+/*!******************************************!*\
+  !*** ./asset_src/js/modules/darkmode.js ***!
+  \******************************************/
+/***/ (function() {
+
+eval("\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/darkmode.js?");
 
 /***/ }),
 
@@ -58,7 +68,7 @@ eval("function _classCallCheck(instance, Constructor) { if (!(instance instanceo
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ \"./node_modules/gsap/ScrollTrigger.js\");\n\n\ngsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\ngsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to('#about', {\n  scrollTrigger: {\n    trigger: '#about',\n    toggleClass: 'js-active',\n    start: 'top 0',\n    once: true\n  }\n});\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/scrolltrigger.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ \"./node_modules/gsap/ScrollTrigger.js\");\n\n\ngsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\ngsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to('#about', {\n  scrollTrigger: {\n    trigger: '#about',\n    toggleClass: 'js-active',\n    start: 'top 20%',\n    once: true\n  }\n});\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/scrolltrigger.js?");
 
 /***/ }),
 

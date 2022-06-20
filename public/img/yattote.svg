@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93" height="13" viewBox="0 0 93 13">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 5.841px;
+        filter: url(#filter);
+        fill: #f7f5f2;
+        font-family: "Gotham Pro";
+        font-weight: 500;
+      }
+    </style>
+    <filter id="filter" x="1723" y="2730" width="93" height="13" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <text id="yattote.svg" class="cls-1" transform="matrix(2.943, 0, 0, 2.908, 0.215, 12.068)">YATOTTE </text>
+</svg>

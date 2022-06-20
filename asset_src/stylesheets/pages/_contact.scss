@@ -1,0 +1,146 @@
+@use "../config/config"as config;
+@use "../mixin/mixin"as mixin;
+@use "../modules/animations"as anime;
+
+.contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .wrap {
+        @include mixin.width_vw(1000);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__detail {
+        width: 50%;
+
+        h3 {
+            @include mixin.font_vw(100);
+            font-weight: 800;
+            letter-spacing: 5px;
+        }
+
+        &__title {
+            p {
+                line-height: 1.2;
+
+                span {
+                    @include mixin.font_vw(30);
+                    display: block;
+                }
+
+                @include mixin.font_vw(73);
+            }
+
+            margin-bottom: 5%;
+        }
+
+        &__comment {
+            padding: 5vh 8%;
+            background: config.$normal_glay;
+            position: relative;
+            overflow: hidden;
+
+            p {
+                @include mixin.font_vw(16);
+                line-height: 2;
+                font-weight: bold;
+                position: relative;
+                z-index: 1;
+            }
+
+            &:before {
+                position: absolute;
+                content: "YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE YATOTTE";
+                color: config.$white;
+                top: 0;
+                left: 0;
+                width: 150%;
+                height: 100%;
+                @include mixin.font_vw(16);
+            }
+        }
+    }
+
+    &__way {
+        width: 40%;
+        position: relative;
+
+
+        &__sns {
+            margin-top: 5vh;
+
+            ul {
+                li {
+                    margin-bottom: 1%;
+
+                    &::before {
+                        content: "-";
+                        margin-right: 5px;
+                    }
+
+                    a {
+                        transition: .5s all;
+
+                        &:hover {
+                            letter-spacing: 3px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        &__form {
+            padding-top: 6vh;
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                width: 100%;
+            }
+
+            p {
+                width: 100%;
+            }
+
+            .formwrap {
+
+                input,
+                textarea {
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    padding: 2%;
+                }
+
+                width: 100%;
+                border-bottom: solid 2px config.$black;
+                margin-bottom: 3vh;
+            }
+
+            .btn {
+                @include mixin.btn();
+                margin-top: 5%;
+                input{
+                    border: none;
+                    outline: none;
+                    
+                }
+                &:hover{
+                    input{
+                        color: config.$black;
+                    }
+                }
+            }
+        }
+        &__thanks{
+            text-align: right;
+            margin-top: 5vh;
+        }
+    }
+}
