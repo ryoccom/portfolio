@@ -226,7 +226,6 @@
   display: table;
   position: relative;
   animation: mvcopy linear .4s forwards;
-  animation-delay: 1.2s;
 
   &:before {
     content: "";
@@ -237,9 +236,27 @@
     left: 0;
     top: 0;
     animation: mvhide linear .4s forwards;
-    animation-delay: 1s;
   }
 }
+
+@mixin texthide02 {
+  color: transparent;
+  overflow: hidden;
+  display: table;
+  position: relative;
+  animation: mvcopy02 linear .4s forwards;
+  &:before {
+    content: "";
+    background: config.$black;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: mvhide linear .4s forwards;
+  }
+}
+
 
 //about line
 @mixin aboutline() {

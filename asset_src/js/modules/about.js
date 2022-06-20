@@ -9,6 +9,7 @@ toggles.forEach((toggle) => {
   const target = toggle.nextElementSibling;
   var toggleNum = [].slice.call( toggles ).indexOf( toggle );
   toggleNum = toggleNum + 1;
+  togglecontents[0].style.height = togglecontents[0].scrollHeight + "px";
   toggle.addEventListener("click", () => {
     toggles.forEach((toggle) => {
       toggle.classList.remove("js-open");

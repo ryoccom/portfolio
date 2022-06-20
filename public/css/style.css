@@ -661,6 +661,285 @@ a:focus {
   color: #000000;
 }
 
+@-webkit-keyframes imghide {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes imghide {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@-webkit-keyframes logo {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes logo {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes mvtitle {
+  0% {
+    width: 30px;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes mvtitle {
+  0% {
+    width: 30px;
+  }
+  100% {
+    width: 0;
+  }
+}
+@-webkit-keyframes mvcopy {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
+}
+@keyframes mvcopy {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
+}
+@-webkit-keyframes mvcopy02 {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #ffffff;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+@keyframes mvcopy02 {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #ffffff;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+@-webkit-keyframes mvhide {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes mvhide {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@-webkit-keyframes aboutbg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes aboutbg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+:root[data-theme=dark] {
+  background: #000000;
+  color: #ffffff;
+}
+:root[data-theme=dark] h1, :root[data-theme=dark] h2, :root[data-theme=dark] h3, :root[data-theme=dark] h4, :root[data-theme=dark] h5, :root[data-theme=dark] a, :root[data-theme=dark] p, :root[data-theme=dark] ul, :root[data-theme=dark] li, :root[data-theme=dark] dl, :root[data-theme=dark] dt, :root[data-theme=dark] span, :root[data-theme=dark] input, :root[data-theme=dark] textarea {
+  color: #ffffff;
+}
+:root[data-theme=dark] .header__logo h1 a:before {
+  background: #ffffff;
+}
+:root[data-theme=dark] .header__logo h1 a span:before {
+  color: #ffffff;
+}
+:root[data-theme=dark] .header__menu ul li a:before {
+  background: #ffffff;
+}
+:root[data-theme=dark] .btn:before, :root[data-theme=dark] .btn:after {
+  background: #ffffff;
+}
+:root[data-theme=dark] .btn__wrap:before, :root[data-theme=dark] .btn__wrap:after {
+  background: #ffffff;
+}
+:root[data-theme=dark] .btn__wrap__line, :root[data-theme=dark] .btn__wrap a {
+  color: #000000;
+}
+:root[data-theme=dark] .btn__wrap__line:before, :root[data-theme=dark] .btn__wrap__line:after, :root[data-theme=dark] .btn__wrap a:before, :root[data-theme=dark] .btn__wrap a:after {
+  background: #ffffff;
+}
+:root[data-theme=dark] .btn__wrap input {
+  color: #000000;
+}
+:root[data-theme=dark] .btn:hover .btn__wrap__line, :root[data-theme=dark] .btn:hover a {
+  background: #000000;
+  color: #ffffff;
+}
+:root[data-theme=dark] .btn:hover input {
+  color: #ffffff;
+}
+:root[data-theme=dark] .mainvisual:before {
+  background: #2d2d2d;
+}
+:root[data-theme=dark] .mainvisual__title {
+  border-left: solid 15px #ffffff;
+}
+:root[data-theme=dark] .mainvisual__title:before {
+  background-image: -webkit-repeating-linear-gradient(45deg, transparent, transparent 9px, white 9px, white 11px);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, white 9px, white 11px);
+}
+:root[data-theme=dark] .mainvisual__title:after {
+  background: #000000;
+}
+:root[data-theme=dark] .mainvisual__title h2 {
+  color: transparent;
+  color: transparent;
+  overflow: hidden;
+  display: table;
+  position: relative;
+  -webkit-animation: mvcopy02 linear 0.4s forwards;
+          animation: mvcopy02 linear 0.4s forwards;
+}
+:root[data-theme=dark] .mainvisual__title h2:before {
+  content: "";
+  background: #000000;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: mvhide linear 0.4s forwards;
+          animation: mvhide linear 0.4s forwards;
+}
+:root[data-theme=dark] .mainvisual__title h2:before {
+  background: #ffffff;
+}
+:root[data-theme=dark] .mainvisual__title p {
+  color: transparent;
+  color: transparent;
+  overflow: hidden;
+  display: table;
+  position: relative;
+  -webkit-animation: mvcopy02 linear 0.4s forwards;
+          animation: mvcopy02 linear 0.4s forwards;
+}
+:root[data-theme=dark] .mainvisual__title p:before {
+  content: "";
+  background: #000000;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: mvhide linear 0.4s forwards;
+          animation: mvhide linear 0.4s forwards;
+}
+:root[data-theme=dark] .mainvisual__title p:before {
+  background: #ffffff;
+}
+:root[data-theme=dark] .mainvisual__wrap {
+  background: #888;
+}
+:root[data-theme=dark] .about h3 {
+  color: #2d2d2d;
+}
+:root[data-theme=dark] .about:after {
+  background: #000000;
+}
+:root[data-theme=dark] .about:before {
+  opacity: 0.8;
+}
+:root[data-theme=dark] .works {
+  background-color: #2d2d2d;
+  border-color: #ffffff;
+}
+:root[data-theme=dark] .works h3 {
+  color: #000000;
+}
+:root[data-theme=dark] .works__detail {
+  background-color: #000000;
+  border-left: solid 1px #ffffff;
+}
+:root[data-theme=dark] .works__detail:before {
+  background-image: -webkit-repeating-linear-gradient(45deg, transparent, transparent 9px, white 9px, white 11px);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, white 9px, white 11px);
+}
+:root[data-theme=dark] .works__detail__link a {
+  border: solid 1px #ffffff;
+}
+:root[data-theme=dark] .works__detail__link a:hover:after {
+  background: #ffffff;
+}
+:root[data-theme=dark] .splide__arrows button {
+  background: #ffffff;
+  color: #000000;
+}
+:root[data-theme=dark] .contact__detail__comment {
+  background: #2d2d2d;
+}
+:root[data-theme=dark] .contact__detail__comment:before {
+  opacity: 0.1;
+}
+:root[data-theme=dark] .contact .formwrap {
+  border-color: #ffffff;
+}
+
 @font-face {
   font-family: "Notosans";
   font-style: normal;
@@ -1023,119 +1302,6 @@ a:focus {
   position: relative;
 }
 
-@-webkit-keyframes imghide {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes imghide {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-@-webkit-keyframes logo {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@keyframes logo {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@-webkit-keyframes mvtitle {
-  0% {
-    width: 30px;
-  }
-  100% {
-    width: 0;
-  }
-}
-@keyframes mvtitle {
-  0% {
-    width: 30px;
-  }
-  100% {
-    width: 0;
-  }
-}
-@-webkit-keyframes mvcopy {
-  0% {
-    color: transparent;
-  }
-  50% {
-    color: #000000;
-  }
-  100% {
-    color: #000000;
-  }
-}
-@keyframes mvcopy {
-  0% {
-    color: transparent;
-  }
-  50% {
-    color: #000000;
-  }
-  100% {
-    color: #000000;
-  }
-}
-@-webkit-keyframes mvhide {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-@keyframes mvhide {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-@-webkit-keyframes aboutbg {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes aboutbg {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .mainvisual {
   position: relative;
   height: 100vh;
@@ -1213,10 +1379,8 @@ a:focus {
   right: 95%;
   background: #ffffff;
   z-index: 1;
-  -webkit-animation: mvtitle cubic-bezier(0.17, 0.67, 0.88, 0.45) 2s forwards;
-          animation: mvtitle cubic-bezier(0.17, 0.67, 0.88, 0.45) 2s forwards;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  -webkit-animation: mvtitle cubic-bezier(0.17, 0.67, 0.88, 0.45) 0.2s forwards;
+          animation: mvtitle cubic-bezier(0.17, 0.67, 0.88, 0.45) 0.2s forwards;
 }
 .mainvisual__title h2 {
   font-size: 5.1976573939vw;
@@ -1230,8 +1394,6 @@ a:focus {
   position: relative;
   -webkit-animation: mvcopy linear 0.4s forwards;
           animation: mvcopy linear 0.4s forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
 }
 @media screen and (max-width: 768px) {
   .mainvisual__title h2 {
@@ -1248,8 +1410,6 @@ a:focus {
   top: 0;
   -webkit-animation: mvhide linear 0.4s forwards;
           animation: mvhide linear 0.4s forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
 }
 .mainvisual__title p {
   font-size: 2.5622254758vw;
@@ -1259,8 +1419,6 @@ a:focus {
   position: relative;
   -webkit-animation: mvcopy linear 0.4s forwards;
           animation: mvcopy linear 0.4s forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
 }
 @media screen and (max-width: 768px) {
   .mainvisual__title p {
@@ -1277,8 +1435,6 @@ a:focus {
   top: 0;
   -webkit-animation: mvhide linear 0.4s forwards;
           animation: mvhide linear 0.4s forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
 }
 
 .about {
@@ -1627,6 +1783,8 @@ a:focus {
   color: #ffffff;
   outline: none;
   letter-spacing: 0;
+  border: none;
+  margin-left: 1px;
 }
 
 .contact {

@@ -39,6 +39,18 @@
     }
 }
 
+@keyframes mvcopy02{
+    0%{
+       color: transparent;
+    }
+    50%{
+        color: config.$white;
+    }
+    100%{
+        color: config.$white;
+    }
+}
+
 @keyframes mvhide{
     0%{
         width: 0;

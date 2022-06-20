@@ -71,8 +71,8 @@
             right: 95%;
             background:config.$white;
             z-index: 1;
-            animation: mvtitle cubic-bezier(.17,.67,.88,.45) 2s forwards;
-            animation-delay: .7s;
+            animation: mvtitle cubic-bezier(.17,.67,.88,.45) .2s forwards;
+
         }
 
        h2{

@@ -37,7 +37,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \***************************************/
 /***/ (function() {
 
-eval("//about toggle\nvar toggles = document.querySelectorAll(\".about dt\");\nvar togglecontents = document.querySelectorAll(\".about dd\");\nvar togglebg = document.querySelector(\".about\");\ntoggles.forEach(function (toggle) {\n  var target = toggle.nextElementSibling;\n  var toggleNum = [].slice.call(toggles).indexOf(toggle);\n  toggleNum = toggleNum + 1;\n  toggle.addEventListener(\"click\", function () {\n    toggles.forEach(function (toggle) {\n      toggle.classList.remove(\"js-open\");\n    });\n    togglecontents.forEach(function (togglecontent) {\n      togglecontent.style.height = \"0\";\n    });\n    toggle.classList.add(\"js-open\");\n    target.style.height = target.scrollHeight + \"px\";\n    togglebg.className = \"about js-bg0\" + toggleNum;\n  });\n  toggle.addEventListener(\"mouseover\", function () {\n    togglebg.className = \"about js-bg0\" + toggleNum;\n  });\n});\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/about.js?");
+eval("//about toggle\nvar toggles = document.querySelectorAll(\".about dt\");\nvar togglecontents = document.querySelectorAll(\".about dd\");\nvar togglebg = document.querySelector(\".about\");\ntoggles.forEach(function (toggle) {\n  var target = toggle.nextElementSibling;\n  var toggleNum = [].slice.call(toggles).indexOf(toggle);\n  toggleNum = toggleNum + 1;\n  togglecontents[0].style.height = togglecontents[0].scrollHeight + \"px\";\n  toggle.addEventListener(\"click\", function () {\n    toggles.forEach(function (toggle) {\n      toggle.classList.remove(\"js-open\");\n    });\n    togglecontents.forEach(function (togglecontent) {\n      togglecontent.style.height = \"0\";\n    });\n    toggle.classList.add(\"js-open\");\n    target.style.height = target.scrollHeight + \"px\";\n    togglebg.className = \"about js-bg0\" + toggleNum;\n  });\n  toggle.addEventListener(\"mouseover\", function () {\n    togglebg.className = \"about js-bg0\" + toggleNum;\n  });\n});\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/about.js?");
 
 /***/ }),
 
@@ -47,7 +47,7 @@ eval("//about toggle\nvar toggles = document.querySelectorAll(\".about dt\");\nv
   \******************************************/
 /***/ (function() {
 
-eval("\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/darkmode.js?");
+eval("// チェックボックスの取得\nvar switchTrigger = document.querySelector(\"#switch__trigger\");\n\nfunction lightMode() {\n  document.documentElement.setAttribute('data-theme', 'light');\n}\n\nfunction darkMode() {\n  document.documentElement.setAttribute('data-theme', 'dark');\n} // チェックした時の挙動\n\n\nswitchTrigger.addEventListener(\"change\", function () {\n  if (switchTrigger.checked == true) {\n    // ダークモード\n    darkMode();\n  } else {\n    // ライトモード\n    lightMode();\n  }\n});\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/darkmode.js?");
 
 /***/ }),
 
