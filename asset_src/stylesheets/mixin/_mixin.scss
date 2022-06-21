@@ -6,7 +6,7 @@
   @return $rate * $size * 1vw;
 }
 
-@function spget_vw($size, $spviewport:768) {
+@function spget_vw($size, $spviewport:1023) {
   $rate: 100 / $spviewport;
   @return $rate * $size * 1vw;
 }
@@ -95,6 +95,11 @@
   position: relative;
   z-index: 1;
   @include width_vw(190);
+  cursor: pointer;
+  @include config.mq() {
+    width: 100%;
+    @include font_vw(42);
+  }
 
   &::before,
   &::after {
@@ -153,6 +158,9 @@
     text-align: center;
     transition: .5s all;
     z-index: 1;
+    @include config.mq() {
+      padding: 3% 0;
+    }
 
     &::before,
     &::after {
@@ -183,6 +191,12 @@
       width: 30%;
       transition-delay: 1s;
     }
+    @include config.mq() {
+      &::before,
+      &:after{
+        content: none;
+      }
+    }
 
     .btn__wrap {
       &::before {
@@ -194,6 +208,12 @@
         height: calc(100% + 1px);
         width: 1px;
         transition-delay: .3s;
+      }
+      @include config.mq() {
+        &::before,
+        &:after{
+          content: none;
+        }
       }
     }
 
@@ -211,6 +231,14 @@
         height: calc(100% + 1px);
         width: 1px;
         transition-delay: .7s;
+      }
+      @include config.mq() {
+        background: config.$black;
+      color: config.$white;
+        &::before,
+        &:after{
+          content: none;
+        }
       }
     }
 
@@ -277,6 +305,9 @@
     letter-spacing: 3px;
     &:before{
       width: 99.5%;
+    }
+    @include config.mq() {
+      letter-spacing: .04em;
     }
   }
 }

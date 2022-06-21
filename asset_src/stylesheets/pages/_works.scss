@@ -7,10 +7,17 @@
     background: config.$normal_glay;
     display: flex;
     align-items: center;
+    @include config.mq() {
+        display: block;
+        padding-top: 13vh;
+    }
     .wrap{
         @include mixin.width_vw(1000);
         margin:0 auto;
         position: relative;
+        @include config.mq() {
+            width: 100%;
+        }
     }
     
     &__img{
@@ -18,13 +25,29 @@
         width: 62%;
         height: 55vh;
         overflow: hidden;
+        background: config.$dark_glay;
         img{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;  
+        }
+        &::before{
             position: absolute;
             top: 50%;
             left: 50%;
+            content: "PRIVATE";
             transform: translate(-50%,-50%);
-            width: 100%;        
+            @include mixin.font_vw(56);
+            color: config.$white;
         }
+        
+        @include config.mq() {
+            width: 100%;
+            height: 40vh;
+        }
+        
     }
     &__detail{
         position: absolute;
@@ -35,15 +58,22 @@
         padding:7vh 5% 0;
         height: 45vh;
         border-left: solid 1px config.$black;
+        @include config.mq() {
+           position: relative;
+           width: calc(100% - 16%);
+           margin: -20% auto 0;
+           padding:5vh 8%;
+           height: 300px;
+        }
         
         &::before{
            content: "";
            position: absolute;
            left: 0;
            top: 0;
-           width: 12px;
+           width: 8px;
            height: 100%;
-           background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(0, 0, 0, 1) 9px, rgba(0, 0, 0, 1) 11px );
+           background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(0, 0, 0, 1) 4px, rgba(0, 0, 0, 1) 6px );
         }
         ul{
             position: relative;
@@ -56,7 +86,6 @@
                 width: 100%;
                 height: 100%;
                 opacity: 0;
-        
             }
         }
         .js-show{
@@ -71,18 +100,30 @@
             h4{
                 @include mixin.font_vw(26);
                 line-height: .8;
+                @include config.mq() {
+                    @include mixin.font_vw(46);
+                }
             }
             p{
                 @include mixin.font_vw(14);
                 font-family: 'Notosans';
+                @include config.mq() {
+                    @include mixin.font_vw(16);
+                }
             }
             margin-bottom: 2vh;
+            @include config.mq() {
+                margin-bottom: .6vh;
+            }
         }
         &__text{
             p{
                 font-weight: bold;
                 @include mixin.font_vw(16);
                 line-height: 2;
+                @include config.mq() {
+                    @include mixin.font_vw(32);
+                }
             }
             margin-bottom: 4%;
         }
@@ -98,6 +139,9 @@
                 }
             }
             margin-bottom: 4%;
+            @include config.mq() {
+                margin-bottom: 2.5vh;
+            }
         }
         &__link{
 
@@ -106,6 +150,13 @@
                 padding:3% 10%;
                 border: config.$black solid 1px;
                 position: relative;
+                @include config.mq() {
+                    @include mixin.font_vw(32);
+                    padding: 5% 20%;
+                    width: 100%;
+                    text-align: center;
+                    
+                }
                 &::after {
                     content: "";
                     position: absolute;
@@ -122,6 +173,11 @@
                     &::after {
                       width: 30%;
                     }
+                    @include config.mq() {
+                        &:after{
+                            display: none;
+                        }
+                    }
                 }
             }
         }
@@ -135,11 +191,17 @@
         font-weight: 800;
         line-height: 1;
         letter-spacing: 5px;
+        @include config.mq() {
+            bottom: calc(100% - 3%);
+        }
     }
 }
 
 .splide{
     width: 80%;
+    @include config.mq() {
+        width: 100%;
+    }
     &__track{
         overflow: visible;
     }
@@ -157,6 +219,19 @@
             letter-spacing: 0;
             border: none;
             margin-left: 1px;
+        }
+        @include config.mq() {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            bottom: initial;
+            right: 0;
+            top: calc(40vh + 240px);
+            button{
+                width: 50px;
+                height: 50px;
+                font-size: 4vw;
+            }
         }
     }
 }

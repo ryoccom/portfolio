@@ -12,6 +12,15 @@
   @include config.mq(md) {
     padding: 5.9% 0 0;
   }
+  @include config.mq() {
+    padding: 10% 0;
+    z-index: 200;
+    transition: all .5s;
+    height: 10vh;
+    max-height: 10vh;
+    
+  }
+  
 
  
   &__logo {
@@ -21,8 +30,14 @@
     padding-left: 70px;
     position: relative;
     z-index: 1;
+   
     @include config.mq(md) {
       padding: 0 0 0 5.3%;
+    }
+    @include config.mq() {
+      padding: 0 8%;
+      justify-content: space-between;
+      width: 100%;
     }
 
     h1 {
@@ -40,6 +55,9 @@
         span{
           animation: logo linear .2s;
         }
+        @include config.mq() {
+          @include mixin.font_vw(54);
+        }
       }
 
       margin-right: 15px;
@@ -53,11 +71,21 @@
 
   &__cv {
     position: absolute;
-    right: 0;
     top: 6%;
     right: 5.3%;
+    
     .btn{
       @include mixin.btn();
+    }
+    @include config.mq() {
+      position: relative;
+      width: calc(100% - 16%);
+      top: initial;
+      right: initial;
+      margin:15% 0 0 8%;
+      transform: translateY(-1000%);
+      transition: all .5s;
+      opacity: 0;
     }
   }
 
@@ -65,11 +93,18 @@
     position: relative;
     margin-top: -5px;
     min-width: 70px;
+    
+    @include config.mq() {
+      margin-top: -6px;
+      transition: all .5s;
+      transform: translateY(-300%);
+    }
 
     input[type="checkbox"]{
       display: none;
       & + label{
         @include mixin.width_vw(83);
+        
         @include mixin.font_vw(12);
         border-radius: 20px 20px;
         background: #e8e5df;
@@ -81,6 +116,11 @@
         cursor: pointer;
         color: config.$glay;
         transition: .5s all;
+        @include config.mq() {
+          width: 80px;
+          padding: 8% 5px 8% 33%;
+          font-size: 12px;
+        }
         &::before {
           content: "";
           width: 18%;
@@ -92,11 +132,19 @@
           left: 5%;
           box-shadow: 0px 1px 0px 0px rgba(80, 80, 80, 0.42);
           transition: .5s all;
+          @include config.mq() {
+            width: 18px;
+            height: 18px;
+            top: 13%;
+          }
         }
       }
       &:checked + label{
         background: #2d2d2d;
         padding: 5% 5px 5% 20%;
+        @include config.mq() {
+          padding: 8% 5px 8% 20%;
+        }
         &::before {
           left: 78%;
         }
@@ -109,7 +157,13 @@
 
   &__menu {
     @include mixin.font_vw(20);
-    
+    @include config.mq() {
+      @include mixin.font_vw(50);
+      margin-top: 10%;
+      transform: translateY(-1000%);
+      transition: all .5s;
+      opacity: 0;
+    }
     ul {
       position: relative;
       z-index: 1;
@@ -119,6 +173,9 @@
         position: relative;
         @include config.mq(md) {
           padding: 0 0 0 5.3%;
+        }
+        @include config.mq() {
+          padding: 0 0 0 8%;
         }
         a{
           @include mixin.menuline();
@@ -131,7 +188,87 @@
     }
   }
 
-  &__button {
+  &__button{
+    position: absolute;
+    outline: none;
+    border: none;
+    top: 5px;
+    right: 0;
+    width: 75px;
+    height: 75px;
+    background: #FFF;
+    z-index: 300;
+    border: none;
+    padding: 25px;
+    transition: all .2s;
     display: none;
+    @include config.mq() {
+      display: block;
+    }
+    &:focus{
+      outline: none;
+    border: none;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      height: 3px;
+      background: config.$black;
+      width: 35px;
+      left: 20px;
+      transition: all .5s;
+    }
+
+    span{
+      position: absolute;
+      height: 3px;
+      background: config.$black;
+      width: 35px;
+      left: 20px;
+      transition: all .5s;
+    }
+    &__line{
+      top: 30px;
+      transform-origin: top center;
+    }
+    &__hidden{
+      bottom: 27px;
+      transform-origin: bottom center;
+    }
+  }
+}
+
+.js-spmode{
+  height: auto;
+  max-height: 80vh;
+  background: config.$white;
+  .switch{
+    transform: translateY(0);
+  }
+  .header__menu{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .header__cv{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .header__button{
+    top: 100%;
+    &:before{
+      content: none;
+    }
+    span{
+      left: 22px;
+    }
+    &__line{
+      transform: rotate(45deg);
+      top: 35px;
+    }
+    &__hidden{
+      transform: rotate(-45deg);
+      bottom: 38px;
+    }
   }
 }

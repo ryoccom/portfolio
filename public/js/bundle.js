@@ -27,7 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_mainvisual__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mainvisual */ \"./asset_src/js/modules/mainvisual.js\");\n/* harmony import */ var _modules_mainvisual__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_mainvisual__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/about */ \"./asset_src/js/modules/about.js\");\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_about__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_scrolltrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrolltrigger */ \"./asset_src/js/modules/scrolltrigger.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./asset_src/js/modules/slider.js\");\n/* harmony import */ var _modules_darkmode__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/darkmode */ \"./asset_src/js/modules/darkmode.js\");\n/* harmony import */ var _modules_darkmode__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_darkmode__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_mainvisual__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mainvisual */ \"./asset_src/js/modules/mainvisual.js\");\n/* harmony import */ var _modules_mainvisual__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_mainvisual__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/about */ \"./asset_src/js/modules/about.js\");\n/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_about__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_scrolltrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrolltrigger */ \"./asset_src/js/modules/scrolltrigger.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./asset_src/js/modules/slider.js\");\n/* harmony import */ var _modules_darkmode__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/darkmode */ \"./asset_src/js/modules/darkmode.js\");\n/* harmony import */ var _modules_darkmode__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_darkmode__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _modules_spmode__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/spmode */ \"./asset_src/js/modules/spmode.js\");\n/* harmony import */ var _modules_spmode__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_spmode__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/index.js?");
 
 /***/ }),
 
@@ -47,7 +47,7 @@ eval("//about toggle\nvar toggles = document.querySelectorAll(\".about dt\");\nv
   \******************************************/
 /***/ (function() {
 
-eval("// チェックボックスの取得\nvar switchTrigger = document.querySelector(\"#switch__trigger\");\n\nfunction lightMode() {\n  document.documentElement.setAttribute('data-theme', 'light');\n}\n\nfunction darkMode() {\n  document.documentElement.setAttribute('data-theme', 'dark');\n} // チェックした時の挙動\n\n\nswitchTrigger.addEventListener(\"change\", function () {\n  if (switchTrigger.checked == true) {\n    // ダークモード\n    darkMode();\n  } else {\n    // ライトモード\n    lightMode();\n  }\n});\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/darkmode.js?");
+eval("// チェックボックスの取得\nvar switchTrigger = document.querySelector(\"#switch__trigger\");\n\nfunction lightMode() {\n  document.documentElement.setAttribute('data-theme', 'light');\n  switchTrigger.nextElementSibling.textContent = \"NIGHT\";\n}\n\nfunction darkMode() {\n  document.documentElement.setAttribute('data-theme', 'dark');\n  switchTrigger.nextElementSibling.textContent = \"LIGHT\";\n} // チェックした時の挙動\n\n\nswitchTrigger.addEventListener(\"change\", function () {\n  if (switchTrigger.checked == true) {\n    // ダークモード\n    darkMode();\n  } else {\n    // ライトモード\n    lightMode();\n  }\n});\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/darkmode.js?");
 
 /***/ }),
 
@@ -80,6 +80,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var gsap
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ \"./node_modules/@splidejs/splide/dist/js/splide.esm.js\");\n\nvar splide = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.splide', {\n  type: 'loop',\n  autoplay: true,\n  pagination: false\n});\nvar sliderDetails = document.querySelectorAll(\".works__detail ul li\");\nsplide.on('move', function (newIndex) {\n  for (var i = 0; i < sliderDetails.length; i++) {\n    sliderDetails[i].classList.remove(\"js-show\");\n    sliderDetails[newIndex].classList.add(\"js-show\");\n  }\n});\nsplide.mount();\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/slider.js?");
+
+/***/ }),
+
+/***/ "./asset_src/js/modules/spmode.js":
+/*!****************************************!*\
+  !*** ./asset_src/js/modules/spmode.js ***!
+  \****************************************/
+/***/ (function() {
+
+eval("var menuTrigger = document.querySelector('.header__button');\nvar moveMenu = document.querySelector('.header');\n\nfunction btnClick() {\n  moveMenu.classList.toggle('js-spmode');\n}\n\nmenuTrigger.addEventListener('click', btnClick);\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/spmode.js?");
 
 /***/ }),
 

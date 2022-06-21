@@ -5,6 +5,9 @@
 .about{
     height: 100vh;
     position: relative;
+    @include config.mq() {
+        padding: 0 8%;
+    }
     &:before{
         content: "";
         width: 50%;
@@ -17,6 +20,14 @@
         opacity: 0;
         transition: all .5s;
         z-index: -1;
+        @include config.mq() {
+            width: 100%;
+            top:initial;
+            bottom: 0;
+            height: 50vh;
+            left: 0;
+            opacity: .8;
+        }
     }
     &:after{
         content: "";
@@ -28,6 +39,12 @@
         background: config.$white;
         z-index: 0;
         transition: .5s all;
+        @include config.mq() {
+            width: 100%;
+            top:initial;
+            bottom: 0;
+            height: 50vh;
+        }
     }
     
     &.js-bg01{
@@ -83,15 +100,27 @@
         line-height: 0;
         letter-spacing: 20px;
         z-index: 1;
+        @include config.mq() {
+            @include mixin.font_vw(200);
+            left: 8%;
+            letter-spacing: 10px;
+            top: 10%;
+        }
     }
     .wrap{
         @include mixin.width_vw(1000);
         margin:0 auto;
+        @include config.mq() {
+            width: 100%;
+        }
     }
     dl{
         padding-top:23vh;
         position: relative;
         z-index: 2;
+        @include config.mq() {
+            padding-top:10vh;
+        }
         dt{
             @include mixin.font_vw(36);
             display: inline-block;
@@ -100,10 +129,20 @@
             @include mixin.aboutline();
             position: relative;
             cursor: pointer;
+            @include config.mq() {
+                @include mixin.font_vw(51);
+                margin-bottom: 0;
+                padding-bottom: 5%;
+            }
 
             span{
                 @include mixin.font_vw(18);
-                margin: 0 0 0 5px; 
+                margin: 0 0 0 5px;
+                @include config.mq() {
+
+                @include mixin.font_vw(22);
+                }
+                
             }
             &.js-open{
                 &:before{
@@ -121,6 +160,12 @@
             overflow: hidden;
             line-height: 2.2;
             font-weight: bold;
+            @include config.mq() {
+                @include mixin.font_vw(32);
+                br{
+                    display: none;
+                }
+            }
             span{
                 padding:2% 0 4%;
                 display: block;

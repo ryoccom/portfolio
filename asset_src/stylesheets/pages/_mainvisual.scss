@@ -1,13 +1,20 @@
-@use "../config/config" as config;
+@use "../config/config"as config;
 @use "../mixin/mixin"as mixin;
 @use "../modules/animations"as anime;
 
-.mainvisual{
+.mainvisual {
     position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include config.mq() {
+        align-items: flex-start;
+        padding-top: 10vh;
+        flex-wrap: wrap;
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -16,16 +23,28 @@
         background: config.$normal_glay;
         left: 0;
         top: 0;
-      }
-    
-    &__wrap{
+        z-index: -1;
+
+        @include config.mq() {
+            @include mixin.width_vw(190);
+        }
+    }
+
+    &__wrap {
         width: 50%;
         background: config.$normal_glay;
         padding-top: 60vh;
         overflow: hidden;
         position: relative;
         margin: 0 0 0 auto;
-        &::before{
+
+        @include config.mq() {
+            width: calc(100% - 8%);
+            align-items: flex-start;
+            
+        }
+
+        &::before {
             content: "";
             position: absolute;
             width: 100%;
@@ -34,59 +53,90 @@
             right: 0;
             top: 0;
             z-index: 1;
-            animation: imghide cubic-bezier(.17,.67,.88,.45) .2s forwards;
+            animation: imghide cubic-bezier(.17, .67, .88, .45) .2s forwards;
         }
-        
-        img{
+
+        img {
             position: absolute;
             top: 0;
             right: 0;
             max-width: 150%;
             right: 4%;
             margin-top: 8%;
+            animation: mvkurumi cubic-bezier(.17, .67, .88, .45) .8s forwards;
+
+
+            @include config.mq() {
+                max-width: 164%;
+                margin-top: 20%;
+            }
         }
     }
-    &__title{
-       border-left: solid 15px config.$black;
-       position: absolute;
-       left: 30%;
-       bottom: 13%;
-       padding-left: 3%;
-       z-index: 1;
-       &::before{
-           content: "";
-           position: absolute;
-           left: 0;
-           top: 5%;
-           width: 12px;
-           height: 100%;
-           background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(0, 0, 0, 1) 9px, rgba(0, 0, 0, 1) 11px );
+
+    &__title {
+        border-left: solid 15px config.$black;
+        position: absolute;
+        left: 30%;
+        bottom: 13%;
+        padding-left: 3%;
+        z-index: 1;
+
+        @include config.mq() {
+            left: 8%;
+            border-left: solid 8px config.$black;
+            padding:1.5% 0 0 6% ;
+            width: 100%;
+            position: relative;
+            bottom: initial;
+            margin-top: -18%;
         }
-        &::after{
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 12px;
+            height: 100%;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(0, 0, 0, 1) 9px, rgba(0, 0, 0, 1) 11px);
+
+            @include config.mq() {
+                background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(0, 0, 0, 1) 4px, rgba(0, 0, 0, 1) 6px);
+                width: 8px;
+            }
+        }
+
+        &::after {
             content: "";
             position: absolute;
             width: 50px;
             height: 105%;
             top: 0;
             right: 95%;
-            background:config.$white;
+            background: config.$white;
             z-index: 1;
-            animation: mvtitle cubic-bezier(.17,.67,.88,.45) .2s forwards;
+            animation: mvtitle cubic-bezier(.17, .67, .88, .45) .2s forwards;
+        }
+
+        h2 {
+            @include mixin.font_vw(71);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 0.08em;
+            margin-bottom: 1%;
+            @include mixin.texthide();
+            @include config.mq() {
+                @include mixin.font_vw(95);
+            }
 
         }
 
-       h2{
-        @include mixin.font_vw(71);
-        font-weight: 800;
-        line-height: 1;
-        letter-spacing: 0.08em;
-        margin-bottom: 1%;
-        @include mixin.texthide();
-        
-       }
-       p{
-        @include mixin.font_vw(35);
-        @include mixin.texthide();
-       }
-    } 
+        p {
+            @include mixin.font_vw(35);
+            @include mixin.texthide();
+            @include config.mq() {
+                @include mixin.font_vw(50);
+            }
+        }
+    }
 }

@@ -1,157 +1,239 @@
-@use "../config/config" as config;
+@use "../config/config"as config;
 @use "../mixin/mixin"as mixin;
 @use "../modules/animations"as anime;
 
-:root{
+:root {
     &[data-theme='dark'] {
         background: config.$black;
         color: config.$white;
-        h1,h2,h3,h4,h5,a,p,ul,li,dl,dt,span,input,textarea{
-            color: config.$white;  
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a,
+        p,
+        ul,
+        li,
+        dl,
+        dt,
+        span,
+        input,
+        textarea {
+            color: config.$white;
         }
-    .header{
-        &__logo{
-            h1{
-                a{
-                    &:before{
-                        background: config.$white;
-                    }
-                    span{
-                        &:before{
-                            color: config.$white;  
-                        }
-                    }
-                }
-            }
-        }
-        &__menu{
-            ul{
-                li{
-                    a{
-                        &:before{
+
+        .header {
+
+            &__logo {
+                h1 {
+                    a {
+                        &:before {
                             background: config.$white;
                         }
-                    }
-                }
-            }
-        }
-    }
-    .btn{
-        &:before,
-        &:after{
-            background: config.$white;
-        }
-        &__wrap{
-            &:before,
-            &:after{
-                background: config.$white;
-            }
-            &__line,a{
-                color: config.$black;
-                &:before,
-                &:after{
-                    background: config.$white;
-                }
-            }
-            input{
-                color: config.$black;
-            }
-        }
-        &:hover{
-            .btn__wrap__line,a{
-                background: config.$black;
-                color: config.$white;
-            }input{
-                color: config.$white;
-            }
-        }
-        
-    }
-        .mainvisual{
-            &:before{
-                background: config.$dark_glay;
-            }
-            &__title{
-                border-left: solid 15px config.$white;
-                &:before{
-                    background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(255, 255, 255, 1) 9px, rgba(255, 255, 255, 1) 11px );
-                }
-                &:after{
-                    background: config.$black;
-                }
-                h2{
-                    color: transparent;
-                    @include mixin.texthide02();
-                    &:before{
-                        background: config.$white;
-                    }
-                }
-                p{
-                    color: transparent;
-                    @include mixin.texthide02();
-                    &:before{
-                        background: config.$white;
-                    }
-                }
-            }
-            &__wrap{
-                background: config.$glay;
-            }
-        }
-        .about{
-            h3{
-                color:config.$dark_glay;    
-            }
-            &:after{
-                background: config.$black;
-            }
-            &:before{
-                opacity: .8;
-            }
-        }
-        .works{
-            background-color: config.$dark_glay;
-            border-color: config.$white;
-            h3{
-                color: config.$black;
-            }
-            &__detail{
-                background-color: config.$black;
-                border-left: solid 1px config.$white;
-                &:before{
-                    background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(255, 255,255, 1) 9px, rgba(255, 255, 255, 1) 11px );
-                }
-                &__link{
-                    
-                    a{
-                        border: solid 1px  config.$white;
-                        &:hover{
-                            &:after{
-                                background:config.$white;
+
+                        span {
+                            &:before {
+                                color: config.$white;
                             }
                         }
                     }
                 }
             }
+
+            &__menu {
+                ul {
+                    li {
+                        a {
+                            &:before {
+                                background: config.$white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__button {
+                background: config.$black;
+
+                &:before,
+                span {
+                    background: config.$white;
+                }
+            }
         }
-        .splide__arrows button{
+
+        .js-spmode {
+            @include config.mq() {
+                background: config.$black;
+            }
+        }
+
+        .btn {
+
+            &:before,
+            &:after {
+                background: config.$white;
+            }
+
+            &__wrap {
+
+                &:before,
+                &:after {
+                    background: config.$white;
+                }
+
+                &__line,
+                a {
+                    color: config.$black;
+
+                    &:before,
+                    &:after {
+                        background: config.$white;
+                    }
+                }
+
+                input {
+                    color: config.$black;
+                }
+            }
+
+            &:hover {
+
+                .btn__wrap__line,
+                a {
+                    background: config.$black;
+                    color: config.$white;
+                }
+
+                input {
+                    color: config.$white;
+                }
+            }
+
+        }
+
+        .mainvisual {
+            &:before {
+                background: config.$dark_glay;
+            }
+
+            &__title {
+                border-left: solid 15px config.$white;
+
+                @include config.mq() {
+                    border-left: solid 8px config.$white;
+                }
+
+                &:before {
+                    background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(255, 255, 255, 1) 9px, rgba(255, 255, 255, 1) 11px);
+
+                    @include config.mq() {
+                        background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(255, 255, 255, 1) 4px, rgba(255, 255, 255, 1) 6px);
+                    }
+                }
+
+                &:after {
+                    background: config.$black;
+                }
+
+                h2 {
+                    color: transparent;
+                    @include mixin.texthide02();
+
+                    &:before {
+                        background: config.$white;
+                    }
+                }
+
+                p {
+                    color: transparent;
+                    @include mixin.texthide02();
+
+                    &:before {
+                        background: config.$white;
+                    }
+                }
+            }
+
+            &__wrap {
+                background: config.$glay;
+            }
+        }
+
+        .about {
+            h3 {
+                color: config.$dark_glay;
+            }
+
+            &:after {
+                background: config.$black;
+            }
+
+            &:before {
+                opacity: .8;
+            }
+        }
+
+        .works {
+            background-color: config.$dark_glay;
+            border-color: config.$white;
+
+            h3 {
+                color: config.$black;
+            }
+
+            &__detail {
+                background-color: config.$black;
+                border-left: solid 1px config.$white;
+
+                &:before {
+                    background-image: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(255, 255, 255, 1) 9px, rgba(255, 255, 255, 1) 11px);
+                }
+
+                &__link {
+
+                    a {
+                        border: solid 1px config.$white;
+
+                        &:hover {
+                            &:after {
+                                background: config.$white;
+                            }
+                        }
+                    }
+                }
+            }
+            &__img{
+                background: config.$normal_glay;
+                &:before{
+                    color: config.$black;
+                }
+            }
+        }
+
+        .splide__arrows button {
             background: config.$white;
             color: config.$black;
         }
-        .contact{
-            &__detail{
-                &__comment{
+
+        .contact {
+            &__detail {
+                &__comment {
                     background: config.$dark_glay;
-                    &:before{
+
+                    &:before {
                         opacity: .1;
                     }
                 }
             }
-            .formwrap{
-                border-color:config.$white;
+
+            .formwrap {
+                border-color: config.$white;
             }
         }
-        
+
     }
-    
+
 }
