@@ -16,8 +16,8 @@
     padding: 10% 0;
     z-index: 200;
     transition: all .5s;
-    height: 10vh;
-    max-height: 10vh;
+    height: 80px;
+    max-height: 80px;
     
   }
   
@@ -30,6 +30,7 @@
     padding-left: 70px;
     position: relative;
     z-index: 1;
+    
    
     @include config.mq(md) {
       padding: 0 0 0 5.3%;
@@ -37,23 +38,31 @@
     @include config.mq() {
       padding: 0 8%;
       justify-content: space-between;
-      width: 100%;
+      width: 100%; 
     }
 
     h1 {
       font-weight: 700;
       line-height: 1;
       margin-top: -6px;
+      
      
       a {
         @include mixin.font_vw(24);
         @include mixin.menuline();
+        
+        
+        
         &:before{
           top: 13%;
+         
         }
+        
+        
         @include mixin.menuhover();
         span{
           animation: logo linear .2s;
+         
         }
         @include config.mq() {
           @include mixin.font_vw(54);
@@ -116,6 +125,7 @@
         cursor: pointer;
         color: config.$glay;
         transition: .5s all;
+        
         @include config.mq() {
           width: 80px;
           padding: 8% 5px 8% 33%;
@@ -125,6 +135,8 @@
           content: "";
           width: 18%;
           padding-top: 18%;
+          min-height: 13px;
+         
           background: #FFF;
           border-radius: 50%;
           position: absolute; 

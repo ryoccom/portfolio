@@ -4,3 +4,4 @@ import './modules/scrolltrigger';
 import './modules/slider';
 import './modules/darkmode';
 import './modules/spmode';
+import './modules/sendmail';

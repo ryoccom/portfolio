@@ -73,9 +73,9 @@
             p {
                 @include mixin.font_vw(16);
                 line-height: 2;
-                font-weight: bold;
                 position: relative;
                 z-index: 1;
+                font-family: 'Notosans';
                 @include config.mq() {
                     @include mixin.font_vw(32); 
                 }
@@ -185,5 +185,16 @@
                 @include mixin.font_vw(32); 
             }
         }
+    }
+}
+
+#dispmsg{
+   
+   
+    p{
+        
+        padding: 5% 5% 1%;
+        background: #888;
+        @include mixin.font_vw(24);
     }
 }

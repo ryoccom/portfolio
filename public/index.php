@@ -1,3 +1,11 @@
+<?php
+session_start();
+session_regenerate_id(true);
+
+$_SESSION['csrf_hash'] = md5(rand(time(), true));
+$home_url = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['SERVER_NAME'];
+?>
+
 <!doctype html>
 <html lang="ja">
 
@@ -339,7 +347,8 @@
                                 </ul>
                             </div>
                             <div class="contact__way__form">
-                                <form action="">
+                            <div id="dispmsg"></div>
+                                <form id="mailform">
                                     <p>NAME</p>
                                     <div class="formwrap">
                                         <input type="text" name="name" id="name" required>
@@ -350,17 +359,18 @@
                                     </div>
                                     <p>MESSAGE</p>
                                     <div class="formwrap">
-                                        <textarea name="" id="" name="text" id="text" required></textarea>
+                                        <textarea name="text" id="text" required></textarea>
                                     </div>
                                     <div class="btn">
                                         <span class="btn__wrap">
                                             <span class="btn__wrap__line">
-                                                <input type="submit" value="送信する" id="submit">
+                                                <input type="submit" value="SEND" id="submit">
                                                 <input type="hidden" name="token" value="<?php echo $_SESSION['csrf_hash']; ?>">
                                             </span>
                                         </span>
                                     </div>
                                 </form>
+                               
                                 
                             </div>
                             <div class="contact__way__thanks">
@@ -374,9 +384,7 @@
             <!--/contact-->
         </main>
     </div>
-
-
-
+    
     <!--scripts-->
     <script src="js/bundle.js"></script>
     <!--/scripts-->

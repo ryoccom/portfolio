@@ -11,7 +11,7 @@
 
     @include config.mq() {
         align-items: flex-start;
-        padding-top: 10vh;
+        padding-top: 80px;
         flex-wrap: wrap;
     }
 
@@ -125,15 +125,16 @@
             letter-spacing: 0.08em;
             margin-bottom: 1%;
             @include mixin.texthide();
+            white-space: nowrap;
             @include config.mq() {
                 @include mixin.font_vw(95);
             }
-
         }
 
         p {
             @include mixin.font_vw(35);
             @include mixin.texthide();
+            white-space: nowrap;
             @include config.mq() {
                 @include mixin.font_vw(50);
             }

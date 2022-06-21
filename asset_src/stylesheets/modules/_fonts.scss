@@ -1,14 +1,13 @@
 @font-face {
     font-family: 'Notosans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 800;
     src:
-    local('Noto Sans CJK JP Regular'),
-    local('NotoSansCJKjp-Regular'),
-    local('NotoSansJP-Regular'),
-    url('fonts/NotoSansJP-Regular.woff') format('woff'),
-    url('fonts/NotoSansJP-Regular.woff2') format('woff2'),
-    url('fonts/NotoSansJP-Regular.otf') format('otf'),;
+    local('Noto Sans CJK JP Bold'),
+    local('NotoSansCJKjp-Bold'),
+    local('NotoSansJP-Bold'),
+    url('fonts/NotoSansJP-Bold.woff') format('woff'),
+    url('fonts/NotoSansJP-Bold.woff2') format('woff2');
 }
 
 @font-face {

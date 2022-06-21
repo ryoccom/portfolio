@@ -46,7 +46,7 @@
   span {
     position: relative;
     transition: all .3s;
-    display: inline-block;
+    display: block;
     top: 8px;
 
     &:before {
@@ -54,9 +54,11 @@
       position: absolute;
       top: 100%;
       color: config.$black;
-      transform: translate3d(0, 0, 0);
+      left: 0;
+
     }
   }
+
 
   &:hover {
     span {
@@ -65,9 +67,13 @@
   }
 }
 
+
+
+
 //menu line
 @mixin menuline() {
   display: block;
+
 
   &::before {
     content: "";
@@ -96,6 +102,7 @@
   z-index: 1;
   @include width_vw(190);
   cursor: pointer;
+
   @include config.mq() {
     width: 100%;
     @include font_vw(42);
@@ -150,7 +157,8 @@
     }
   }
 
-  &__wrap__line, a{
+  &__wrap__line,
+  a {
     display: block;
     color: #FFF;
     width: 100%;
@@ -158,6 +166,7 @@
     text-align: center;
     transition: .5s all;
     z-index: 1;
+
     @include config.mq() {
       padding: 3% 0;
     }
@@ -191,9 +200,11 @@
       width: 30%;
       transition-delay: 1s;
     }
+
     @include config.mq() {
+
       &::before,
-      &:after{
+      &:after {
         content: none;
       }
     }
@@ -209,18 +220,21 @@
         width: 1px;
         transition-delay: .3s;
       }
+
       @include config.mq() {
+
         &::before,
-        &:after{
+        &:after {
           content: none;
         }
       }
     }
 
-    .btn__wrap__line,a{
+    .btn__wrap__line,
+    a {
       background: config.$white;
       color: config.$black;
-    
+
       &::before {
         width: 100%;
         height: 1px;
@@ -232,17 +246,19 @@
         width: 1px;
         transition-delay: .7s;
       }
+
       @include config.mq() {
         background: config.$black;
-      color: config.$white;
+        color: config.$white;
+
         &::before,
-        &:after{
+        &:after {
           content: none;
         }
       }
     }
 
-    
+
 
   }
 }
@@ -273,6 +289,7 @@
   display: table;
   position: relative;
   animation: mvcopy02 linear .4s forwards;
+
   &:before {
     content: "";
     background: config.$black;
@@ -289,6 +306,7 @@
 //about line
 @mixin aboutline() {
   transition: .4s;
+
   &::before {
     content: "";
     height: 1px;
@@ -299,13 +317,18 @@
     position: absolute;
     transition: .4s;
     transform: translateY(-50%);
+    @include config.mq() {
+      content: none;
+    }
   }
 
   &:hover {
     letter-spacing: 3px;
-    &:before{
+
+    &:before {
       width: 99.5%;
     }
+
     @include config.mq() {
       letter-spacing: .04em;
     }

@@ -55,6 +55,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'css/[name]'
         }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        }),
     ],
     target: ["web", "es5"],
     watch: true,
