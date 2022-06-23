@@ -6,7 +6,8 @@
     height: 100vh;
     position: relative;
     @include config.mq() {
-        padding: 0 8%;
+        padding: 0 8% 45vh;
+        height: auto;
     }
     &:before{
         content: "";
@@ -24,9 +25,8 @@
             width: 100%;
             top:initial;
             bottom: 0;
-            height: 50vh;
+            height: 40vh;
             left: 0;
-            opacity: .8;
         }
     }
     &:after{
@@ -49,15 +49,15 @@
     
     &.js-bg01{
         &:before{
-            background: url(../img/about_bg01.webp) no-repeat;
-            background-size: cover;
+            background-image: url(../img/about_bg01.webp);
             opacity: 1;
+            @include config.mq() {
+            }
         }
     }
     &.js-bg02{
         &:before{
-            background: url(../img/about_bg02.webp) no-repeat;
-            background-size: cover;
+            background-image: url(../img/about_bg02.webp);
             opacity: 1;
         }
 
@@ -65,8 +65,7 @@
 
     &.js-bg03{
         &:before{
-            background: url(../img/about_bg03.webp) no-repeat;
-            background-size: cover;
+            background-image: url(../img/about_bg03.webp);
             opacity: 1;
         }
 
@@ -74,8 +73,7 @@
 
     &.js-bg04{
         &:before{
-            background: url(../img/about_bg04.webp) no-repeat;
-            background-size: cover;
+            background-image: url(../img/about_bg04.webp);
             opacity: 1;
         }
 
@@ -83,8 +81,7 @@
 
     &.js-bg05{
         &:before{
-            background: url(../img/about_bg05.webp) no-repeat;
-            background-size: cover;
+            background-image: url(../img/about_bg05.webp);
             opacity: 1;
         }
     }
@@ -119,7 +116,7 @@
         position: relative;
         z-index: 2;
         @include config.mq() {
-            padding-top:12vh;
+            padding-top:15vh;
         }
         dt{
             @include mixin.font_vw(36);
@@ -129,10 +126,12 @@
             @include mixin.aboutline();
             position: relative;
             cursor: pointer;
+            white-space:nowrap;
             @include config.mq() {
-                @include mixin.font_vw(51);
+                font-size:2.8vh;
                 margin-bottom: 0;
-                padding-bottom: 8%;
+                padding-bottom: 4vh;
+                
             }
 
             span{
@@ -161,7 +160,7 @@
             line-height: 2.2;
             font-family: 'Notosans', sans-serif;
             @include config.mq() {
-                @include mixin.font_vw(32);
+                
                 br{
                     display: none;
                 }
@@ -171,6 +170,7 @@
                 display: block;
                 @include config.mq() {
                     padding:0 0 8%;
+                    font-size: 2vh;
                 }
             }
         }

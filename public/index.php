@@ -21,8 +21,13 @@ $home_url = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['SERVER_NAME'];
     <title>ryoccom</title>
     <link rel="stylesheet" href="css/splide.min.css">
     <link rel="stylesheet" href="css/style.css?v=1">
-    
     <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="preload" as="image" href="img/about_bg01.webp">
+    <link rel="preload" as="image" href="img/about_bg02.webp">
+    <link rel="preload" as="image" href="img/about_bg03.webp">
+    <link rel="preload" as="image" href="img/about_bg04.webp">
+    <link rel="preload" as="image" href="img/about_bg05.webp">
+    <link rel="preload" as="image" href="img/about_bg06.webp">
 </head>
 
 
@@ -213,6 +218,9 @@ $home_url = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['SERVER_NAME'];
                                         <p>前回のポートフォリオが自分色を出しすぎたと感じたため、作り直しました。
                                             シンプルisベスト。
                                         </p>
+                                    </div>
+                                    <div class="works__detail__link">
+                                        <a href="https://ryoccom.com/portfolio/" target="_blank">WEBSITE</a>
                                     </div>
                                 </li>
                                 <li>

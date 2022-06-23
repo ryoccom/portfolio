@@ -39,15 +39,55 @@
   }
 }
 
+@mixin text-crop($line-height: 1.3, $top-adjustment: 0px, $bottom-adjustment: 0px) {
+  // Configured in Step 1
+  $top-crop: 9;
+  $bottom-crop: 8;
+  $crop-font-size: 36;
+  $crop-line-height: 1.2;
+
+  // Apply values to calculate em-based margins that work with any font size
+  $dynamic-top-crop: max(($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+  $dynamic-bottom-crop: max(($bottom-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+
+  // Mixin output
+  line-height: $line-height;
+
+  &::before,
+  &::after {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+  }
+
+  &::before {
+      margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
+  }
+
+  &::after {
+      margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
+  }
+}
+// Mixin generated at: http://text-crop.eightshapes.com/?typeface-selection=custom-font&typeface=Lato&custom-typeface-name=Gotham%20pro&custom-typeface-url=&custom-typeface-weight=400&custom-typeface-style=normal&weight-and-style=100&size=36&line-height=1.2&top-crop=9&bottom-crop=8
+
+
+
 //menuhover
 @mixin menuhover() {
   overflow: hidden;
+  
 
   span {
     position: relative;
     transition: all .3s;
-    display: block;
     top: 8px;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    perspective: 1000;
+   
+    
+
 
     &:before {
       content: attr(data-hover);
@@ -55,7 +95,6 @@
       top: 100%;
       color: config.$black;
       left: 0;
-
     }
   }
 
@@ -63,6 +102,9 @@
   &:hover {
     span {
       transform: translateY(-100%);
+      @include config.mq() {
+        transform: none;
+      }
     }
   }
 }
@@ -91,6 +133,11 @@
     &::before {
       @include width_vw(55);
       left: 0;
+    }
+    @include config.mq() {
+      &::before {
+        display: none;
+      }
     }
   }
 }

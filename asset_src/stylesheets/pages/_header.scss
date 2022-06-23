@@ -30,13 +30,12 @@
     padding-left: 70px;
     position: relative;
     z-index: 1;
-    
    
     @include config.mq(md) {
       padding: 0 0 0 5.3%;
     }
     @include config.mq() {
-      padding: 0 8%;
+      padding: 0 0 0 8%;
       justify-content: space-between;
       width: 100%; 
     }
@@ -45,6 +44,7 @@
       font-weight: 700;
       line-height: 1;
       margin-top: -6px;
+   
       
      
       a {
@@ -52,16 +52,15 @@
         @include mixin.menuline();
         
         
-        
         &:before{
           top: 13%;
-         
         }
         
         
         @include mixin.menuhover();
         span{
           animation: logo linear .2s;
+          display: block;
          
         }
         @include config.mq() {
@@ -106,7 +105,9 @@
     @include config.mq() {
       margin-top: -6px;
       transition: all .5s;
-      transform: translateY(-300%);
+      transform: translateY(-500%);
+      width: 70px;
+      margin-right: 8%;
     }
 
     input[type="checkbox"]{
@@ -204,9 +205,9 @@
     position: absolute;
     outline: none;
     border: none;
-    top: 5px;
+    top: 0;
     right: 0;
-    width: 75px;
+    width: 80px;
     height: 75px;
     background: #FFF;
     z-index: 300;
@@ -284,3 +285,27 @@
     }
   }
 }
+
+_::-webkit-full-page-media, _:future, :root .header__logo span{
+  animation: none;
+  top: 0;
+  line-height: 1.6;
+}
+_::-webkit-full-page-media, _:future, :root .header__logo span:before{
+  display: none;
+}
+
+_::-webkit-full-page-media, _:future, :root .header__logo span:hover{
+  transform: none;
+}
+
+_::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox] + label{
+  min-height: 20px;
+}
+
+_::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox] + label::before{
+  min-height: 15px;
+}
+
+
+

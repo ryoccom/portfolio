@@ -64,7 +64,8 @@
             right: 4%;
             margin-top: 8%;
             animation: mvkurumi cubic-bezier(.17, .67, .88, .45) .8s forwards;
-
+            backface-visibility:hidden;
+            -webkit-overflow-scrolling: touch;
 
             @include config.mq() {
                 max-width: 164%;
@@ -88,7 +89,7 @@
             width: 100%;
             position: relative;
             bottom: initial;
-            margin-top: -18%;
+            margin-top: -6%;
         }
 
         &::before {
