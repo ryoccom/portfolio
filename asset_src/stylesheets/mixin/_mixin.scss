@@ -6,7 +6,7 @@
   @return $rate * $size * 1vw;
 }
 
-@function spget_vw($size, $spviewport:1023) {
+@function spget_vw($size, $spviewport:1024) {
   $rate: 100 / $spviewport;
   @return $rate * $size * 1vw;
 }
@@ -81,7 +81,7 @@
   span {
     position: relative;
     transition: all .3s;
-    top: 8px;
+    top: 0;
     backface-visibility:hidden;
     -webkit-backface-visibility:hidden;
     perspective: 1000;
@@ -216,6 +216,7 @@
 
     @include config.mq() {
       padding: 3% 0;
+      transition: none;
     }
 
     &::before,
@@ -241,6 +242,7 @@
   &:hover {
     &::before {
       width: 0;
+      
     }
 
     &::after {
@@ -252,7 +254,9 @@
 
       &::before,
       &:after {
-        content: none;
+       display: none;
+        
+        transition: none;
       }
     }
 
@@ -272,7 +276,8 @@
 
         &::before,
         &:after {
-          content: none;
+          display: none;
+          transition: none;
         }
       }
     }
@@ -297,10 +302,10 @@
       @include config.mq() {
         background: config.$black;
         color: config.$white;
-
+        transition: none;
         &::before,
         &:after {
-          content: none;
+          display: none;
         }
       }
     }
@@ -327,6 +332,7 @@
     left: 0;
     top: 0;
     animation: mvhide linear .4s forwards;
+    backface-visibility:hidden;
   }
 }
 

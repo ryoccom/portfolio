@@ -13,7 +13,7 @@
     padding: 5.9% 0 0;
   }
   @include config.mq() {
-    padding: 10% 0;
+    padding: 40px 0;
     z-index: 200;
     transition: all .5s;
     height: 80px;
@@ -50,7 +50,7 @@
       a {
         @include mixin.font_vw(24);
         @include mixin.menuline();
-        
+        display: block;
         
         &:before{
           top: 13%;
@@ -64,7 +64,12 @@
          
         }
         @include config.mq() {
-          @include mixin.font_vw(54);
+          @include mixin.font_vw(35);
+          
+        }
+        @include config.mq(sp) {
+          @include mixin.font_vw(60);
+          
         }
       }
 
@@ -72,6 +77,7 @@
 
       @include config.mq(md) {
         margin-right: 1.2%;
+        margin-top: -8px;
       }
 
     }
@@ -99,13 +105,13 @@
 
   .switch {
     position: relative;
-    margin-top: -5px;
+    margin-top: -7px;
     min-width: 70px;
     
     @include config.mq() {
       margin-top: -6px;
       transition: all .5s;
-      transform: translateY(-500%);
+      transform: translateY(-85px);
       width: 70px;
       margin-right: 8%;
     }
@@ -120,16 +126,22 @@
         background: #e8e5df;
         position: relative;
         display: block;
-        padding: 5% 5px 5% 33%;
+        padding: 5% 5px 5% 30%;
         line-height: 1;
         letter-spacing: 0.02em;
         cursor: pointer;
         color: config.$glay;
         transition: .5s all;
+
+        @include config.mq(md) {
+        
+          padding: 9% 5px 5% 20px;
+          
+        }
         
         @include config.mq() {
           width: 80px;
-          padding: 8% 5px 8% 33%;
+          padding: 8% 5px 8% 40%;
           font-size: 12px;
         }
         &::before {
@@ -156,7 +168,7 @@
         background: #2d2d2d;
         padding: 5% 5px 5% 20%;
         @include config.mq() {
-          padding: 8% 5px 8% 20%;
+          padding: 9% 5px 8% 20%;
         }
         &::before {
           left: 78%;
@@ -171,7 +183,7 @@
   &__menu {
     @include mixin.font_vw(20);
     @include config.mq() {
-      @include mixin.font_vw(50);
+      font-size: 20px;
       margin-top: 10%;
       transform: translateY(-1000%);
       transition: all .5s;
@@ -195,6 +207,9 @@
           display: inline-block;
           &:hover{
             letter-spacing: 3px;
+            @include config.mq() {
+              letter-spacing: 0.8px;
+            }
           }
         }
       }
@@ -284,27 +299,25 @@
       bottom: 38px;
     }
   }
+  
 }
 
-_::-webkit-full-page-media, _:future, :root .header__logo span{
-  animation: none;
-  top: 0;
-  line-height: 1.6;
-}
-_::-webkit-full-page-media, _:future, :root .header__logo span:before{
-  display: none;
+
+
+_::-webkit-full-page-media, _:future, :root .header__logo h1{
+  white-space: nowrap; 
 }
 
-_::-webkit-full-page-media, _:future, :root .header__logo span:hover{
-  transform: none;
-}
+
+
+
 
 _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox] + label{
   min-height: 20px;
 }
 
 _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox] + label::before{
-  min-height: 15px;
+  min-height: 18px;
 }
 
 

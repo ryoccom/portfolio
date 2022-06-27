@@ -27,7 +27,6 @@ $home_url = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['SERVER_NAME'];
     <link rel="preload" as="image" href="img/about_bg03.webp">
     <link rel="preload" as="image" href="img/about_bg04.webp">
     <link rel="preload" as="image" href="img/about_bg05.webp">
-    <link rel="preload" as="image" href="img/about_bg06.webp">
 </head>
 
 
@@ -38,7 +37,7 @@ $home_url = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['SERVER_NAME'];
             <div class="header">
                 <div class="header__logo">
                     <h1>
-                        <a href="index.html"><span data-hover="RYOCCO WADA">RYOCCO WADA</span></a>
+                        <a href="#"><span data-hover="RYOCCO WADA">RYOCCO WADA</span></a>
                     </h1>
                     <div class="switch">
                         <input type="checkbox" id="switch__trigger">
@@ -109,7 +108,7 @@ $home_url = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['SERVER_NAME'];
                             </dd>
                             <dt>KEKKON!<span>2016-</span></dt>
                             <dd><span>結婚しました！<br>
-                                    派遣社員になり、求人広告会社で採用サイト、コーポレートサイトなどのデザイン・コーディングを担当。<br>素敵なチームメンバーに恵まれ、切磋琢磨しながらもりもりと多数のサイトを世に出す。</span>
+                                    派遣社員になり、求人広告会社で採用サイト、コーポレートサイトなどのデザイン・コーディングを担当。<br>素敵なチームメンバーに恵まれ、もりもりと多数のサイトを世に出す。</span>
                             </dd>
                             <dt>MAMA<span>2019,2021-</span></dt>
                             <dd><span>不妊治療を経て、とてもかんわゆいぴっかぴかの2人の男の子に恵まれる。<br>
@@ -127,70 +126,22 @@ $home_url = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['SERVER_NAME'];
 
                         <section class="splide" aria-label="基本構造の例">
                             <div class="splide__track">
-                                <ul class="splide__list">
-                                    <!--loop-->
-                                    <li class="splide__slide">
-                                        <div class="works__img">
-                                            <picture>
-                                                <source srcset="img/image06.webp" type="image/webp">
-                                                <img src="img/image06.png" alt="PORTFOLIO_NEW">
-                                            </picture>
-                                        </div>
-                                    </li>
-                                     <!--loop-->
-                                     <li class="splide__slide">
-                                        <div class="works__img">
-                                            <picture>
-                                                <source srcset="img/image05.webp" type="image/webp">
-                                                <img src="img/image05.png" alt="HOIKUEN -SUMMER FESTA-">
-                                            </picture>
-                                        </div>
-                                    </li>
-                                     <!--loop-->
-                                     <li class="splide__slide">
-                                        <div class="works__img">
-                                            <picture>
-                                                <source srcset="img/image04.webp" type="image/webp">
-                                                <img src="img/image04.png" alt="PORTFOLIO_OLD">
-                                            </picture>
-                                        </div>
-                                    </li>
-                                    <!--loop-->
-                                    <li class="splide__slide">
-                                        <div class="works__img">
-                                            <picture>
-                                                <source srcset="img/image03.webp" type="image/webp">
-                                                <img src="img/image03.png" alt="RENOTECH MANAGEMENT">
-                                            </picture>
-                                        </div>
-                                    </li>
-                                    <!--loop-->
-                                    <li class="splide__slide">
-                                        <div class="works__img">
-                                            <picture>
-                                                <source srcset="img/image02.webp" type="image/webp">
-                                                <img src="img/image02.png" alt="HASHIMOTO KOMUTEN">
-                                            </picture>
-                                        </div>
-                                    </li>
-                                    <!--loop-->
-                                    <li class="splide__slide">
-                                        <div class="works__img">
-                                            <!-- <picture>
-                                                <img src="img/image01.png" alt="HU'ELANI LOMI">
-                                            </picture> -->
-                                        </div>
-                                    </li>
-                                    <!--loop-->
-                                    <li class="splide__slide">
-                                        <div class="works__img">
-                                            <picture>
-                                                <source srcset="img/image01.webp" type="image/webp">
-                                                <img src="img/image01.png" alt="HU'ELANI LOMI">
-                                            </picture>
-                                        </div>
-                                    </li>
+                                <!--cms-->
+                                <ul class="splide__list" id="js-image">
+                                    <script type="text/x-handlebars-template" id="img-template">
+                                        {{#each data}}
+                                            <li class="splide__slide">
+                                                <div class="works__img">
+                                                    <picture>
+                                                        <source srcset="{{image.imageMain.url}}" type="image/webp">
+                                                        <img src="{{image.imageWebp.url}}" alt="{{image.imgalt}}">
+                                                    </picture>
+                                                </div>
+                                            </li>
+                                        {{/each}}
+                                    </script>
                                 </ul>
+                                <!--cms-->
                             </div>
                             <div class="splide__arrows">
                                 <button class="splide__arrow splide__arrow--prev">
@@ -203,130 +154,34 @@ $home_url = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['SERVER_NAME'];
                         </section>
                         <div class="works__detail">
                             <h3>WORKS</h3>
-                            <ul>
-                                <li class="js-show">
-                                    <div class="works__detail__title">
-                                        <h4>PORTFOLIO_NEW</h4>
-                                        <p>(新)ポートフォリオ</p>
-                                    </div>
-                                    <div class="works__detail__tags">
-                                        <p>DESIGN</p>
-                                        <p>CODING</p>
-                                        <p>FORM -PHP-</p>
-                                    </div>
-                                    <div class="works__detail__text">
-                                        <p>前回のポートフォリオが自分色を出しすぎたと感じたため、作り直しました。
-                                            シンプルisベスト。
-                                        </p>
-                                    </div>
-                                    <div class="works__detail__link">
-                                        <a href="https://ryoccom.com/portfolio/" target="_blank">WEBSITE</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="works__detail__title">
-                                        <h4>HOIKUEN SUMMER FES</h4>
-                                        <p>保育園-夏祭りチラシ-</p>
-                                    </div>
-                                    <div class="works__detail__tags">
-                                        <p>DESIGN</p>
-                                    </div>
-                                    <div class="works__detail__text">
-                                        <p>保育園の夏祭りのチラシを作成。保護者分は白黒印刷なので、
-                                            コントラストを意識して作成しました。
-                                        </p>
-                                    </div>
-                                    <div class="works__detail__link">
-                                        <a href="img/summerfes.pdf" target="_blank">PDF</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="works__detail__title">
-                                        <h4>PORTFOLIO_OLD</h4>
-                                        <p>(旧)ポートフォリオ</p>
-                                    </div>
-                                    <div class="works__detail__tags">
-                                        <p>DESIGN</p>
-                                        <p>CODING</p>
-                                    </div>
-                                    <div class="works__detail__text">
-                                        <p>職探し用に、そしてJSのアニメーションライブラリの勉強用に作成。本当の私が表現されています</p>
-                                    </div>
-                                    
-                                    <div class="works__detail__link">
-                                        <a href="https://ryoccom.com/portfolio_old/" target="_blank">WEBSITE</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="works__detail__title">
-                                        <h4>RENOTECH MANAGEMENT</h4>
-                                        <p>リノテックマネージメント</p>
-                                    </div>
-                                    <div class="works__detail__tags">
-                                        <p>DESIGN</p>
-                                        <p>CODING</p>
-                                        <p>WORDPRESS</p>
-                                    </div>
-                                    <div class="works__detail__text">
-                                        <p>古い従来の２カラムサイトを使いやすさはそのままに、
-                                            レスポンシブに組み直しデザインを一新しました。</p>
-                                    </div>
-                                    
-                                    <div class="works__detail__link">
-                                        <a href="http://rinomane.com/" target="_blank">WEBSITE</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="works__detail__title">
-                                        <h4>HASHIMOTO KOMUTEN</h4>
-                                        <p>橋本工務店</p>
-                                    </div>
-                                    <div class="works__detail__tags">
-                                        <p>DESIGN</p>
-                                        <p>CODING</p>
-                                        <p>WORDPRESS</p>
-                                    </div>
-                                    <div class="works__detail__text">
-                                        <p>レスポンシブ対応に伴うリニューアル。従来のサイトより画像を見やすく配置しました。</p>
-                                    </div>
-                                    
-                                    <div class="works__detail__link">
-                                        <a href="https://www.hashimotokoumuten.jp/" target="_blank">WEBSITE</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="works__detail__title">
-                                        <h4>PRIVATE</h4>
-                                        <p>非公開案件</p>
-                                    </div>
-                                    <div class="works__detail__tags">
-                                        <p>LP</p>
-                                        <p>CORPOLATE</p>
-                                        <p>RECRUITMENT</p>
-                                        <p>AB TEST</p>
-                                    </div>
-                                    <div class="works__detail__text">
-                                        <p>10年以上、制作に携わり色々経験しております。ご相談ください。</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="works__detail__title">
-                                        <h4>HU'ELANI LOMI</h4>
-                                        <p>フエラニ・ロミ</p>
-                                    </div>
-                                    <div class="works__detail__tags">
-                                        <p>DESIGN</p>
-                                        <p>CORDING</p>
-                                    </div>
-                                    <div class="works__detail__text">
-                                        <p>ハワイアンマッサージ、ロミロミのお店。海が迎え入れてくれるイメージで作成しました。</p>
-                                    </div>
-                                    
-                                    <div class="works__detail__link">
-                                        <a href="http://www.huelani-lomi.com/" target="_blank">WEBSITE</a>
-                                    </div>
-                                </li>
+                            <!--cms-->
+                            <ul id="js-result">
+                                <script type="text/x-handlebars-template" id="news-template">
+                                    {{#each data}}
+                                    <li>
+                                        <div class="works__detail__title">
+                                            <h4>{{titleEng}}</h4>
+                                            <p>{{titleJp}}</p>
+                                        </div>
+                                        <div class="works__detail__tags">
+                                            {{#each tag}}
+                                            <p>{{this}}</p>
+                                            {{/each}}
+                                        </div>
+                                        <div class="works__detail__text">
+                                            <p>{{text}}
+                                            </p>
+                                        </div>
+                                        {{#if buttonLink}}
+                                        <div class="works__detail__link">
+                                            <a href="{{buttonLink}}" target="_blank">{{buttonName}}</a>
+                                        </div>
+                                        {{/if}}
+                                    </li>
+                                    {{/each}}
+                                </script>
                             </ul>
+                            <!--cms-->
                         </div>
                     </div>
                 </div>

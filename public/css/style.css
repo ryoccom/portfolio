@@ -1029,7 +1029,7 @@ a:focus {
   font-family: "Gothampro";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/GothamBold.woff") format("woff"), url("fonts/GothamBold.ttf") format("ttf");
+  src: url("fonts/Gotham-Pro-Bold.woff") format("woff"), url("fonts/Gotham Pro Bold.ttf") format("ttf");
 }
 @font-face {
   font-family: "Gothampro";
@@ -1052,7 +1052,7 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header {
-    padding: 10% 0;
+    padding: 40px 0;
     z-index: 200;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -1095,11 +1095,12 @@ a:focus {
 .header__logo h1 a {
   font-size: 1.756954612vw;
   display: block;
+  display: block;
   overflow: hidden;
 }
 @media screen and (max-width: 1023px) {
   .header__logo h1 a {
-    font-size: 2.3460410557vw;
+    font-size: 2.34375vw;
   }
 }
 .header__logo h1 a::before {
@@ -1121,7 +1122,7 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header__logo h1 a:hover::before {
-    width: 5.376344086vw;
+    width: 5.37109375vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -1136,7 +1137,7 @@ a:focus {
   position: relative;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  top: 8px;
+  top: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -1166,17 +1167,28 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header__logo h1 a {
-    font-size: 3.953147877vw;
+    font-size: 2.5622254758vw;
   }
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .header__logo h1 a {
-    font-size: 5.2785923754vw;
+    font-size: 3.41796875vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__logo h1 a {
+    font-size: 4.39238653vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 1023px) {
+  .header__logo h1 a {
+    font-size: 5.859375vw;
   }
 }
 @media screen and (max-width: 1366px) {
   .header__logo h1 {
     margin-right: 1.2%;
+    margin-top: -8px;
   }
 }
 .header__cv {
@@ -1193,12 +1205,12 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header__cv .btn {
-    font-size: 1.7595307918vw;
+    font-size: 1.7578125vw;
   }
 }
 @media screen and (max-width: 1023px) {
   .header__cv .btn {
-    width: 18.5728250244vw;
+    width: 18.5546875vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -1209,7 +1221,7 @@ a:focus {
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .header__cv .btn {
-    font-size: 4.1055718475vw;
+    font-size: 4.1015625vw;
   }
 }
 .header__cv .btn::before, .header__cv .btn::after {
@@ -1270,6 +1282,8 @@ a:focus {
   .header__cv .btn__wrap__line,
 .header__cv .btn a {
     padding: 3% 0;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 .header__cv .btn__wrap__line::before, .header__cv .btn__wrap__line::after,
@@ -1302,7 +1316,9 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header__cv .btn:hover::before, .header__cv .btn:hover:after {
-    content: none;
+    display: none;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 .header__cv .btn:hover .btn__wrap::before {
@@ -1317,7 +1333,9 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header__cv .btn:hover .btn__wrap::before, .header__cv .btn:hover .btn__wrap:after {
-    content: none;
+    display: none;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 .header__cv .btn:hover .btn__wrap__line,
@@ -1344,11 +1362,13 @@ a:focus {
 .header__cv .btn:hover a {
     background: #000000;
     color: #ffffff;
+    -webkit-transition: none;
+    transition: none;
   }
   .header__cv .btn:hover .btn__wrap__line::before, .header__cv .btn:hover .btn__wrap__line:after,
 .header__cv .btn:hover a::before,
 .header__cv .btn:hover a:after {
-    content: none;
+    display: none;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -1367,7 +1387,7 @@ a:focus {
 }
 .header .switch {
   position: relative;
-  margin-top: -5px;
+  margin-top: -7px;
   min-width: 70px;
 }
 @media screen and (max-width: 1023px) {
@@ -1375,8 +1395,8 @@ a:focus {
     margin-top: -6px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    -webkit-transform: translateY(-500%);
-            transform: translateY(-500%);
+    -webkit-transform: translateY(-85px);
+            transform: translateY(-85px);
     width: 70px;
     margin-right: 8%;
   }
@@ -1391,7 +1411,7 @@ a:focus {
   background: #e8e5df;
   position: relative;
   display: block;
-  padding: 5% 5px 5% 33%;
+  padding: 5% 5px 5% 30%;
   line-height: 1;
   letter-spacing: 0.02em;
   cursor: pointer;
@@ -1401,18 +1421,23 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header .switch input[type=checkbox] + label {
-    width: 8.1133919844vw;
+    width: 8.10546875vw;
   }
 }
 @media screen and (max-width: 1023px) {
   .header .switch input[type=checkbox] + label {
-    font-size: 1.1730205279vw;
+    font-size: 1.171875vw;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .header .switch input[type=checkbox] + label {
+    padding: 9% 5px 5% 20px;
   }
 }
 @media screen and (max-width: 1023px) {
   .header .switch input[type=checkbox] + label {
     width: 80px;
-    padding: 8% 5px 8% 33%;
+    padding: 8% 5px 8% 40%;
     font-size: 12px;
   }
 }
@@ -1444,7 +1469,7 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header .switch input[type=checkbox]:checked + label {
-    padding: 8% 5px 8% 20%;
+    padding: 9% 5px 8% 20%;
   }
 }
 .header .switch input[type=checkbox]:checked + label::before {
@@ -1455,23 +1480,18 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header__menu {
-    font-size: 1.9550342131vw;
+    font-size: 1.953125vw;
   }
 }
 @media screen and (max-width: 1023px) {
   .header__menu {
-    font-size: 3.6603221083vw;
+    font-size: 20px;
     margin-top: 10%;
     -webkit-transform: translateY(-1000%);
             transform: translateY(-1000%);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     opacity: 0;
-  }
-}
-@media screen and (max-width: 1023px) and (max-width: 1023px) {
-  .header__menu {
-    font-size: 4.8875855327vw;
   }
 }
 .header__menu ul {
@@ -1516,7 +1536,7 @@ a:focus {
 }
 @media screen and (max-width: 1023px) {
   .header__menu ul li a:hover::before {
-    width: 5.376344086vw;
+    width: 5.37109375vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -1526,6 +1546,11 @@ a:focus {
 }
 .header__menu ul li a:hover {
   letter-spacing: 3px;
+}
+@media screen and (max-width: 1023px) {
+  .header__menu ul li a:hover {
+    letter-spacing: 0.8px;
+  }
 }
 .header__button {
   position: absolute;
@@ -1621,20 +1646,8 @@ a:focus {
   bottom: 38px;
 }
 
-_::-webkit-full-page-media, _:future, :root .header__logo span {
-  -webkit-animation: none;
-          animation: none;
-  top: 0;
-  line-height: 1.6;
-}
-
-_::-webkit-full-page-media, _:future, :root .header__logo span:before {
-  display: none;
-}
-
-_::-webkit-full-page-media, _:future, :root .header__logo span:hover {
-  -webkit-transform: none;
-          transform: none;
+_::-webkit-full-page-media, _:future, :root .header__logo h1 {
+  white-space: nowrap;
 }
 
 _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox] + label {
@@ -1642,7 +1655,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 
 _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox] + label::before {
-  min-height: 15px;
+  min-height: 18px;
 }
 
 .wrapper {
@@ -1690,7 +1703,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .mainvisual::before {
-    width: 18.5728250244vw;
+    width: 18.5546875vw;
   }
 }
 .mainvisual__wrap {
@@ -1804,7 +1817,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .mainvisual__title h2 {
-    font-size: 6.9403714565vw;
+    font-size: 6.93359375vw;
   }
 }
 .mainvisual__title h2:before {
@@ -1817,6 +1830,8 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
   top: 0;
   -webkit-animation: mvhide linear 0.4s forwards;
           animation: mvhide linear 0.4s forwards;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 @media screen and (max-width: 1023px) {
   .mainvisual__title h2 {
@@ -1825,7 +1840,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .mainvisual__title h2 {
-    font-size: 9.2864125122vw;
+    font-size: 9.27734375vw;
   }
 }
 .mainvisual__title p {
@@ -1840,7 +1855,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .mainvisual__title p {
-    font-size: 3.4213098729vw;
+    font-size: 3.41796875vw;
   }
 }
 .mainvisual__title p:before {
@@ -1853,6 +1868,8 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
   top: 0;
   -webkit-animation: mvhide linear 0.4s forwards;
           animation: mvhide linear 0.4s forwards;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 @media screen and (max-width: 1023px) {
   .mainvisual__title p {
@@ -1861,7 +1878,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .mainvisual__title p {
-    font-size: 4.8875855327vw;
+    font-size: 4.8828125vw;
   }
 }
 
@@ -1951,7 +1968,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .about h3 {
-    font-size: 23.6559139785vw;
+    font-size: 23.6328125vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -1964,7 +1981,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .about h3 {
-    font-size: 19.550342131vw;
+    font-size: 19.53125vw;
   }
 }
 .about .wrap {
@@ -1973,7 +1990,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .about .wrap {
-    width: 97.7517106549vw;
+    width: 97.65625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2004,7 +2021,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .about dl dt {
-    font-size: 3.5190615836vw;
+    font-size: 3.515625vw;
   }
 }
 .about dl dt::before {
@@ -2049,7 +2066,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .about dl dt span {
-    font-size: 1.7595307918vw;
+    font-size: 1.7578125vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2059,7 +2076,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .about dl dt span {
-    font-size: 2.1505376344vw;
+    font-size: 2.1484375vw;
   }
 }
 .about dl dt.js-open:before {
@@ -2079,7 +2096,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .about dl dd {
-    font-size: 1.5640273705vw;
+    font-size: 1.5625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2127,7 +2144,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .works .wrap {
-    width: 97.7517106549vw;
+    width: 97.65625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2162,7 +2179,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .works__img::before {
-    font-size: 5.4740957967vw;
+    font-size: 5.46875vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2184,7 +2201,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .works__detail {
-    width: 54.7409579668vw;
+    width: 54.6875vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2211,12 +2228,12 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 .works__detail ul li {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  padding-top: 7vh;
+  padding-top: 5vh;
 }
 @media screen and (max-width: 1023px) {
   .works__detail ul li {
@@ -2237,11 +2254,11 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 .works__detail__title h4 {
   font-size: 1.9033674963vw;
-  line-height: 0.8;
+  line-height: 1.4;
 }
 @media screen and (max-width: 1023px) {
   .works__detail__title h4 {
-    font-size: 2.541544477vw;
+    font-size: 2.5390625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2256,7 +2273,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .works__detail__title p {
-    font-size: 1.3685239492vw;
+    font-size: 1.3671875vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2279,7 +2296,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .works__detail__text p {
-    font-size: 1.5640273705vw;
+    font-size: 1.5625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2296,7 +2313,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .works__detail__tags p {
-    font-size: 1.3685239492vw;
+    font-size: 1.3671875vw;
   }
 }
 .works__detail__tags p:before {
@@ -2311,7 +2328,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .works__detail__tags p {
-    font-size: 2.7370478983vw;
+    font-size: 2.734375vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2335,7 +2352,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .works__detail__link a {
-    font-size: 3.128054741vw;
+    font-size: 3.125vw;
   }
 }
 .works__detail__link a::after {
@@ -2371,7 +2388,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .works h3 {
-    font-size: 9.7751710655vw;
+    font-size: 9.765625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2382,7 +2399,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .works h3 {
-    font-size: 14.6627565982vw;
+    font-size: 14.6484375vw;
   }
 }
 
@@ -2460,7 +2477,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .contact .wrap {
-    width: 97.7517106549vw;
+    width: 97.65625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2484,7 +2501,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .contact__detail h3 {
-    font-size: 9.7751710655vw;
+    font-size: 9.765625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2495,7 +2512,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .contact__detail h3 {
-    font-size: 11.7302052786vw;
+    font-size: 11.71875vw;
   }
 }
 .contact__detail__title {
@@ -2511,7 +2528,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .contact__detail__title p span {
-    font-size: 2.9325513196vw;
+    font-size: 2.9296875vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2521,12 +2538,12 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .contact__detail__title p span {
-    font-size: 4.8875855327vw;
+    font-size: 4.8828125vw;
   }
 }
 @media screen and (max-width: 1023px) {
   .contact__detail__title p {
-    font-size: 7.1358748778vw;
+    font-size: 7.12890625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2536,7 +2553,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .contact__detail__title p {
-    font-size: 9.7751710655vw;
+    font-size: 9.765625vw;
   }
 }
 .contact__detail__comment {
@@ -2559,7 +2576,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .contact__detail__comment p {
-    font-size: 1.5640273705vw;
+    font-size: 1.5625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2579,7 +2596,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .contact__detail__comment:before {
-    font-size: 1.5640273705vw;
+    font-size: 1.5625vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2617,7 +2634,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .contact__way__sns ul li a {
-    font-size: 4.1055718475vw;
+    font-size: 4.1015625vw;
   }
 }
 .contact__way__sns ul li a:hover {
@@ -2667,12 +2684,12 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .contact__way__form .btn {
-    font-size: 1.7595307918vw;
+    font-size: 1.7578125vw;
   }
 }
 @media screen and (max-width: 1023px) {
   .contact__way__form .btn {
-    width: 18.5728250244vw;
+    width: 18.5546875vw;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -2683,7 +2700,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .contact__way__form .btn {
-    font-size: 4.1055718475vw;
+    font-size: 4.1015625vw;
   }
 }
 .contact__way__form .btn::before, .contact__way__form .btn::after {
@@ -2744,6 +2761,8 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
   .contact__way__form .btn__wrap__line,
 .contact__way__form .btn a {
     padding: 3% 0;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 .contact__way__form .btn__wrap__line::before, .contact__way__form .btn__wrap__line::after,
@@ -2776,7 +2795,9 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .contact__way__form .btn:hover::before, .contact__way__form .btn:hover:after {
-    content: none;
+    display: none;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 .contact__way__form .btn:hover .btn__wrap::before {
@@ -2791,7 +2812,9 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   .contact__way__form .btn:hover .btn__wrap::before, .contact__way__form .btn:hover .btn__wrap:after {
-    content: none;
+    display: none;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 .contact__way__form .btn:hover .btn__wrap__line,
@@ -2818,11 +2841,13 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 .contact__way__form .btn:hover a {
     background: #000000;
     color: #ffffff;
+    -webkit-transition: none;
+    transition: none;
   }
   .contact__way__form .btn:hover .btn__wrap__line::before, .contact__way__form .btn:hover .btn__wrap__line:after,
 .contact__way__form .btn:hover a::before,
 .contact__way__form .btn:hover a:after {
-    content: none;
+    display: none;
   }
 }
 .contact__way__form .btn input {
@@ -2844,7 +2869,7 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) and (max-width: 1023px) {
   .contact__way__thanks {
-    font-size: 3.128054741vw;
+    font-size: 3.125vw;
   }
 }
 
@@ -2855,6 +2880,6 @@ _::-webkit-full-page-media, _:future, :root .header .switch input[type=checkbox]
 }
 @media screen and (max-width: 1023px) {
   #dispmsg p {
-    font-size: 2.3460410557vw;
+    font-size: 2.34375vw;
   }
 }
